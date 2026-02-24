@@ -1,0 +1,792 @@
+Delivered-To: 19hrdlf@gmail.com
+Received: by 2002:a05:6359:1502:b0:269:11ac:7e42 with SMTP id jt2csp8337548rwb;
+        Sat, 3 Jan 2026 04:31:44 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IG6NsMSG6LmZki/pH78R1tt2o8Dk3kflRyIZ/dPCS6R7beGQxyEJ6gxdAdsCqyxCG3akIsz
+X-Received: by 2002:a05:6214:409:b0:890:56e:d3ce with SMTP id 6a1803df08f44-890056ed461mr450979876d6.23.1767443504203;
+        Sat, 03 Jan 2026 04:31:44 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767443504; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TczLVtrz+o830zAjDgJxFvZVMTLNCNWg7XQgfQ1UL+pb+doNlMy4QzHqC652CW8AuJ
+         etL+oW7hpKIPnnGP8k3z9xLK1Qw3SPh6L5UX/ElHTxaZduqJShoxJiuXTWLiuQ04dQKB
+         BLs/zYG0wRfcInf1++9ov9OhYr7G3nSTSFCGmo1wJkG0JQeLUhIZ/rjowCuG6TwJt/nH
+         uolKxO8sy4q9K2gNtAbDiJNjW43++v1Ms7XYOW6zGy8h2nL2HR27kWUfiws7My0X39PV
+         xNuJDTAWj7YGIY3FpvxlZVlwE2J/hCP6OaDjQOaa9xoYqAP98Uw/RMIlsz9UuGr9edvz
+         yq0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:to:mime-version:subject:message-id:from
+         :date:dkim-signature:dkim-signature;
+        bh=0XSNPeIh7Sn51C15qrd5ohBWULb1LEJ4l9BblYUYm/s=;
+        fh=G97tMTmspptvzmEaN8Qx8S9xOcR+fUmttl1skOXK1vw=;
+        b=FEkCFM2Ek3Qco6yZOUPX3cU1AwIUFJz9CQ7sToT3H2bPIxpy0ovLu50IgzKyBZ1/7d
+         bwAYc52/FVB0kb6Jze05ioQOdKdpIKoW4NlA1jKwQYvRldBgVFeI8klwrPcim1b2eW4c
+         cnfKGTC4ZWDTPJx5D7G/TLQTdvm26l/lf3xHTQW2qIkiGQCctZRFnGAM/ng1zvqRkjFJ
+         kVR8HEj9AeVDgRi0d1udypAdnLERM3PlCQmLwPinjQsrsKNT8ULmI8U8w3ygFDwg9Pnh
+         I8waDj2WwrgDaLyNBsyKZQ3GPId7oD0yoe/lV6cc15NZXuOLg8mOoAa53Z0z0EeW5DUR
+         /V4A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@coingecko.com header.s=s1 header.b=HvpgdHl4;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=l97+zlG6;
+       spf=pass (google.com: domain of bounces+9596931-eccf-19hrdlf=gmail.com@em1545.coingecko.com designates 149.72.149.117 as permitted sender) smtp.mailfrom="bounces+9596931-eccf-19hrdlf=gmail.com@em1545.coingecko.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=coingecko.com
+Return-Path: <bounces+9596931-eccf-19hrdlf=gmail.com@em1545.coingecko.com>
+Received: from wrqvwrtr.outbound-mail.sendgrid.net (wrqvwrtr.outbound-mail.sendgrid.net. [149.72.149.117])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d951bccd6si515526186d6.53.2026.01.03.04.31.44
+        for <19hrdlf@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 03 Jan 2026 04:31:44 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+9596931-eccf-19hrdlf=gmail.com@em1545.coingecko.com designates 149.72.149.117 as permitted sender) client-ip=149.72.149.117;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@coingecko.com header.s=s1 header.b=HvpgdHl4;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=l97+zlG6;
+       spf=pass (google.com: domain of bounces+9596931-eccf-19hrdlf=gmail.com@em1545.coingecko.com designates 149.72.149.117 as permitted sender) smtp.mailfrom="bounces+9596931-eccf-19hrdlf=gmail.com@em1545.coingecko.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=coingecko.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=coingecko.com;
+	h=date:from:subject:mime-version:to:content-type:
+	content-transfer-encoding:cc:content-type:date:feedback-id:from:subject:to;
+	s=s1; bh=0XSNPeIh7Sn51C15qrd5ohBWULb1LEJ4l9BblYUYm/s=;
+	b=HvpgdHl4xsM8xtBHiJ+cjpcNpOanyOcWmLUdq3kpMnGBqHbMbdlIZp9G+9aTBWydJqMo
+	t6wM7n4QWs4J3PiPqc5Z575lD3Znp5YgbUfZxzOEawUW++30sEH/K523Dd3Hl+xHLSDso3
+	yhZ6sbFlasYjtfZXz84Kf6+vpMN6MJJx2KGvodoO2ni2sn7QwkvDbjONWAyUjoSlpK7SSx
+	HslSc3UV/QaxomOzS55Uvrju9NId8IDsP0IMICODloGqWMwvhCCT00DOPXgaYpfoeOd59c
+	uIV39axxYmq+xvP8/im9RxLpuczGB3cvG4kk6Yre/RYCuDaBNXcnJHldRhFraPFw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=date:from:subject:mime-version:to:content-type:
+	content-transfer-encoding:cc:content-type:date:feedback-id:from:subject:to;
+	s=smtpapi; bh=0XSNPeIh7Sn51C15qrd5ohBWULb1LEJ4l9BblYUYm/s=;
+	b=l97+zlG6VYuODsKbcrjKT9S0yWsCQLbVdnqLWBX1sczQthLiX0BiMf2lJz+WOaM54yyc
+	W+apYZ3b54DZsAfLl0mvFcG9cY/1Vtn5enGsrK73JASDYElP7zQgmUH/nPAbrNzrXRZXI2
+	l3/8PCQLooAeAZUCw3e+xS2Gn7+4pj1x0=
+Received: by recvd-598bc547fb-vj87v with SMTP id recvd-598bc547fb-vj87v-1-69590C2F-3C
+	2026-01-03 12:31:43.799546668 +0000 UTC m=+1433884.024620529
+Received: from coingecko.com (unknown)
+	by geopod-ismtpd-61 (SG) with ESMTP
+	id ytODXM4OSgye-UvwZdtuaA
+	for <19hrdlf@gmail.com>;
+	Sat, 03 Jan 2026 12:31:43.743 +0000 (UTC)
+Date: Sat, 03 Jan 2026 12:31:43 +0000 (UTC)
+From: CoinGecko <geckobot@coingecko.com>
+Message-ID: <69590c2f8c097_73e9dc47747dc@666586f110b7.mail>
+Subject: Request Received - Coin Listing (HRDLF) (CL0301260025)
+Mime-Version: 1.0
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EGeUscLgD8J9VNAntbQ+52KCscf9paUGJpMSsZIal56KaBuAcX+ctDeqlz?=
+ =?us-ascii?Q?iTuqsd3RQ3wZhl3mqbe91cL=2FYsIo8NuwbFHMmH+?=
+ =?us-ascii?Q?ErdKHuObD1AzVk89SbYEkPtaGWVJRS8c8wMG7=2Fu?=
+ =?us-ascii?Q?arjOz9RdLR0LpMy2nJmMuOFgpGdUEouojp4vP88?=
+ =?us-ascii?Q?OlyAYKx1q8cyG50DjTsl+QOVpaNgbv9jkjaBoWC?=
+ =?us-ascii?Q?JyPXIX1hg2FLkzcvukjbUE=3D?=
+To: 19hrdlf@gmail.com
+X-Entity-ID: u001.+tXk/oTRP35DhtTuRlijEg==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"en" dir=3D"ltr">
+  <head>
+    <meta charset=3D"UTF-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
+    <link rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin=
+>
+    <link href=3D"https://fonts.googleapis.com/css2?family=3DInter:ital,ops=
+z,wght@0,14..32,100..900;1,14..32,100..900&display=3Dswap" rel=3D"styleshee=
+t">
+    <title>Welcome Email</title>
+    <style>
+      /* Regular (400) */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://coingecko.com/fonts/Inter-Regular.woff2') format(=
+'woff2');
+      }
+
+      /* Medium (500) */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        src: url('https://coingecko.com/fonts/Inter-Medium.woff2') format('=
+woff2');
+      }
+
+      /* SemiBold (600) */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        src: url('https://coingecko.com/fonts/Inter-SemiBold.woff2') format=
+('woff2');
+      }
+
+      /* Bold (700) */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        src: url('https://coingecko.com/fonts/Inter-Bold.woff2') format('wo=
+ff2');
+      }
+
+      @media only screen and (min-width: 601px) {
+        .email-container {
+          max-width: 600px !important;
+        }
+        .outer-padding {
+          padding: 4px !important;
+        }
+      }
+
+      @media only screen and (max-width: 430px) {
+        .desktop-layout {
+          display: none !important;
+        }
+        .mobile-layout {
+          display: block !important;
+        }
+        .mobile-outer-padding {
+          padding: 4px !important;
+        }
+        .outer-padding {
+          padding: 0px !important;
+        }
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        .email-bg {
+          background-color: #1a202c !important;
+        }
+        .content-bg {
+          background-color: #0D1217 !important;
+          border-color: #212D3B !important;
+        }
+        .title-text {
+          color: #ffffff !important;
+        }
+        .body-text {
+          color: #8EA3BE !important;
+        }
+        .small-body-text {
+          color: #8EA3BE !important;
+        }
+        .footer-text {
+          color: #8EA3BE !important;
+        }
+        .logo-light {
+          display: none !important;
+        }
+        .logo-dark {
+          display: block !important;
+        }
+        .dashed-line {
+          border-bottom: 1px dashed #384A61 !important;
+        }
+      }
+
+      /* Alternative approach using borders */
+      .text-cell {
+        width: 1%;
+        white-space: nowrap;
+        color: #475569;
+        font-size: 14px;
+        font-family: monospace;
+        text-align: center;
+      }
+      .spacer-cell {
+        width: 25px;
+      }
+      .line-cell {
+        width: 30%;
+      }
+
+      /* Dashed line alternative */
+      .dashed-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 0 30px 0;
+      }
+      .dashed-table td {
+        padding: 15px 0;
+        vertical-align: middle;
+      }
+      .dashed-line {
+        border-bottom: 1px dashed #CBD5E1;
+        height: 1px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body style=3D"letter-spacing: normal; font-family: 'Inter', Arial, sans-=
+serif; background-color: #f1f5f9; margin: 0; padding: 40px 0; line-height: =
+1.5; font-feature-settings: 'liga' 1, 'calt' 1, 'cv06' 1, 'cv05' 1, 'cv10' =
+1;" class=3D"email-bg mobile-outer-padding">
+    <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" =
+style=3D"background-color: #f1f5f9;" class=3D"email-bg">
+      <tbody>
+        <tr>
+          <td style=3D"vertical-align: top; background-color: #f1f5f9;" ali=
+gn=3D"center" valign=3D"top" class=3D"email-bg">
+            <table class=3D"email-container email-bg" style=3D"margin: 0 au=
+to; background-color: #f1f5f9;" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" align=3D"center" bgcolor=3D"#f1f5f9">
+              <tbody>
+                <tr>
+                  <td style=3D"vertical-align: top;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"width: 100%;" class=3D"email-bg">
+                      <tbody>
+                        <tr>
+                          <td class=3D"outer-padding email-bg" style=3D"ver=
+tical-align: top; background-color: #f1f5f9; padding: 4px;">
+                            <table cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" class=3D"email-bg">
+                              <tbody>
+                                <tr>
+                                  <td style=3D"vertical-align: top;">
+                                  </td>
+                                </tr>
+                                <tr>
+  <td style=3D"vertical-align: top;" width=3D"100%">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" =
+class=3D"email-bg" style=3D"margin-bottom: 10px;">
+      <tbody>
+        <tr>
+          <td class=3D"content-bg" style=3D"vertical-align: top; background=
+-color: #ffffff; border-radius: 8px; border: 1px solid #eff2f5; padding: 32=
+px 32px 40px 32px;" bgcolor=3D"#ffffff" width=3D"100%">
+           =20
+                                  <table cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" width=3D"100%" >
+                                    <tbody>
+                                      <tr>
+                                        <!-- Logo Section -->
+                                        <td style=3D"vertical-align: top; t=
+ext-align: center; padding-bottom: 48px;">
+                                          <img class=3D"logo-light" style=
+=3D"width: 128px; height: auto; display: block;" border=3D"0" width=3D"128"=
+ src=3D"  http://cdn.mcauto-images-production.sendgrid.net/6aac149c6c1dbbaa=
+/fa4d41f7-052e-403c-96c6-be8d9b3450b7/512x112.png
+">
+                                          <img class=3D"logo-dark" style=3D=
+"width: 128px; height: auto; display: none;" border=3D"0" width=3D"128" src=
+=3D"  http://cdn.mcauto-images-production.sendgrid.net/6aac149c6c1dbbaa/9f4=
+d1cf5-f465-4292-9d65-5fefbd7082a3/512x113.png
+">
+                                        </td>
+                                      </tr>
+                                      <!-- Main Heading -->
+                                      <tr>
+                                        <td style=3D"vertical-align: top; p=
+adding-bottom: 24px;">
+                                          <div style=3D"line-height: normal=
+;">
+                                            <span class=3D"title-text" styl=
+e=3D"color: #0d1217; font-weight: 600; font-family: 'Inter', Arial, sans-se=
+rif; font-size: 24px; line-height: normal;">  Your listing request for <spa=
+n style=3D"color: #4bcc00;">HRDLF</span> has been received.
+</span>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <!-- Subheading -->
+                                        <tr>
+                                          <td style=3D"vertical-align: top;=
+ padding-bottom: 24px;">
+                                            <div style=3D"line-height: norm=
+al; text-align: left;">
+                                              <span class=3D"title-text" st=
+yle=3D"color: #334155; font-weight: 600; font-family: 'Inter', Arial, sans-=
+serif; font-size: 18px; line-height: normal;">  We=E2=80=99re currently eva=
+luating your request.
+</span>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      <!-- Request ID Badge -->
+                                        <tr>
+                                          <td style=3D"vertical-align: top;=
+ padding-bottom: 24px;">
+                                            <table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"content-bg">
+                                              <tbody>
+                                                <tr>
+                                                  <td style=3D"vertical-ali=
+gn: middle; border-radius: 100px; border: 1px solid #94a3b8; padding: 10px =
+20px;" align=3D"center" class=3D"content-bg">
+                                                    <table cellspacing=3D"0=
+" cellpadding=3D"0" border=3D"0" class=3D"content-bg">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td style=3D"vert=
+ical-align: middle;" align=3D"center" width=3D"16">
+                                                            <img style=3D"w=
+idth: 16px; height: auto; display: block; margin-right: 10px;" border=3D"0"=
+ width=3D"16" src=3D  http://cdn.mcauto-images-production.sendgrid.net/6aac=
+149c6c1dbbaa/83b5bc04-e3a6-40f1-b964-231a4cf8f6db/31x30.png
+>
+                                                          </td>
+                                                          <td style=3D"vert=
+ical-align: middle;" align=3D"center">
+                                                            <div style=3D"l=
+ine-height: normal; text-align: left;">
+                                                              <span class=
+=3D"small-text" style=3D"color: #64748b; font-weight: 600; font-family: 'In=
+ter', Arial, sans-serif; font-size: 14px; line-height: normal;">  Request I=
+D =E2=80=93 CL0301260025
+</span>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      <!-- Welcome Image -->
+                                      <tr>
+                                        <td>
+                                        <div style=3D"width: 100%; outline:=
+ 1px var(--Border-Primary, #EFF2F5) solid; margin-bottom: 24px"></div>
+                                        </td>
+                                      </tr>
+                                      <!-- Description Text -->
+                                      <tr>
+                                        <td style=3D"vertical-align: top; p=
+adding-bottom: 24px;">
+                                          <div style=3D"line-height: normal=
+; text-align: left;">
+                                              <div>
+    <span class=3D"body-text" style=3D"color: #64748b; font-weight: 400; fo=
+nt-family: 'Inter', Arial, sans-serif; font-size: 14px; line-height: 21px;"=
+>
+      Hi 19hrdlf@gmail.com,
+    </span>
+  </div>
+  <div style=3D"margin-top: 24px;">
+    <span class=3D"body-text" style=3D"color: #64748b; font-weight: 400; fo=
+nt-family: 'Inter', Arial, sans-serif; font-size: 14px; line-height: 21px;"=
+>
+      <b>Your request to list HRDLF has been received</b> and is currently =
+being evaluated by our team. You should hear back from us within 5 business=
+ days.
+    </span>
+  </div>
+  <div style=3D"margin-top: 24px;">
+    <span class=3D"body-text" style=3D"color: #64748b; font-weight: 400; fo=
+nt-family: 'Inter', Arial, sans-serif; font-size: 14px; line-height: 21px;"=
+>
+      We appreciate your patience in this matter and assure you that we are=
+ doing everything we can to expedite the process without compromising the q=
+uality of our assessment.
+    </span>
+  </div>
+  <div style=3D"margin-top: 24px;">
+    <span class=3D"body-text" style=3D"color: #64748b; font-weight: 400; fo=
+nt-family: 'Inter', Arial, sans-serif; font-size: 14px; line-height: 21px;"=
+>
+      <b>CoinGecko Request Fast Pass</b>
+      <br/>
+      If you wish to expedite the evaluation process, you can purchase our =
+Fast Pass service to have your request escalated within 24 hours.
+    </span>
+  </div>
+  <tr>
+  <td style=3D"vertical-align: top; padding-bottom: 48px;">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"conten=
+t-bg">
+      <tbody>
+        <tr>
+          <td style=3D"vertical-align: middle;background-color: #4bcc00;bor=
+der-radius: 8px;box-shadow: 0 4px 0 0 #35af00;padding: 10px 20px" bgcolor=
+=3D"#4bcc00" align=3D"center" width=3D"100%">
+            <div style=3D"line-height: normal; text-align: center;">
+              <a href=3D"https://url8813.coingecko.com/ls/click?upn=3Du001.=
+T7gBNiIZH18R09XAFsZfQ2XVAgJce7n2q1wqMSYX4oFvuZMSabgmHk3CEpKCpLaUBJu5SJ6fFaL=
+VMUr-2BZcL0UXdKVtZS-2B9SjQhqtGTzOyZNUp6IfiXY54siot-2F3vab3Poi-2B4b7HLLNA-2B=
+vjyX8C-2BUVZBtYNuBZY2JwnndSa2ZsvY-3Dgrfj_sYoWJySJBEKZCd26I6Rb8a5jcp3t7DoblC=
+jo-2BqLUDU5MB4XEAQ38jAFcxE34dawkfoSAQQCecZOlhILfj-2BNmS3KuZCoEVgHlMceV7KIJW=
+s-2BENMxk1z5bAJ-2Bv18-2BXpvPEtO-2B-2FYnly3blBKSaxKI3KoZqaYldRwtWL-2FdnK6H-2=
+BE4s-2BFGHGHnJpfUw011SSM5rSryEelby4k4OD03PHkIrS77A-3D-3D" style=3D"color: #=
+ffffff; font-weight: 600; font-family: 'Inter', Arial, sans-serif; font-siz=
+e: 14px; line-height: normal; text-decoration: none; display: inline-block;=
+">Explore Fast Pass</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <!-- Signature -->
+                                      <tr>
+                                        <td style=3D"vertical-align: middle=
+;">
+                                          <table cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" width=3D"100%" class=3D"content-bg">
+                                            <tbody>
+                                            <tr>
+                                              <td style=3D"vertical-align: =
+middle;" width=3D"40">
+                                                  <img style=3D"width: 40px=
+; height: auto; display: block; margin-right: 16px;" border=3D"0" width=3D"=
+40" src=3D"http://cdn.mcauto-images-production.sendgrid.net/6aac149c6c1dbba=
+a/0060a316-6e46-44b6-94de-da889d3afe28/80x66.png">
+                                              </td>
+                                              <td style=3D"vertical-align: =
+middle;">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"content-bg">
+                                                  <tbody>
+                                                  <tr>
+                                                    <td style=3D"vertical-a=
+lign: middle;">
+                                                      <div style=3D"line-he=
+ight: normal; text-align: left; margin-bottom: 4px;">
+                                                        <span class=3D"smal=
+l-text small-body-text" style=3D"color: #475569; font-family: 'Inter', Aria=
+l, sans-serif; font-size: 14px; line-height: normal;">Your crypto companion=
+,</span>
+                                                      </div>
+                                                      <div style=3D"line-he=
+ight: normal; text-align: left;">
+                                                        <span class=3D"smal=
+l-text title-text" style=3D"color: #0d1217; font-weight: 600; font-family: =
+'Inter', Arial, sans-serif; font-size: 14px; line-height: normal;">Gekko</s=
+pan>
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+                                  <table class=3D"dashed-table">
+    <tr>
+      <td class=3D"line-cell">
+        <div class=3D"dashed-line"></div>
+      </td>
+      <td class=3D"spacer-cell">&nbsp;</td>
+      <td class=3D"text-cell">  While waiting, here=E2=80=99s how you can p=
+repare for what=E2=80=99s next.
+</td>
+      <td class=3D"spacer-cell">&nbsp;</td>
+      <td class=3D"line-cell">
+        <div class=3D"dashed-line"></div>
+      </td>
+    </tr>
+  </table>
+
+                                    <tr>
+  <td style=3D"vertical-align: top;" width=3D"100%">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" =
+class=3D"email-bg" style=3D"margin-bottom: 10px;">
+      <tbody>
+        <tr>
+          <td class=3D"content-bg" style=3D"vertical-align: top; background=
+-color: #ffffff; border-radius: 8px; border: 1px solid #eff2f5; padding: 32=
+px 32px 40px 32px;" bgcolor=3D"#ffffff" width=3D"100%">
+           =20
+    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" =
+>
+      <tbody>
+        <tr>
+          <!-- Logo Section -->
+          <td style=3D"vertical-align: top; text-align: center; padding-bot=
+tom: 36px; padding-top: 12px;">
+            <img class=3D"logo-light" style=3D"width: 128px; height: auto; =
+margin: 0 auto; display: block;" border=3D"0" width=3D"128" src=3D"http://c=
+dn.mcauto-images-production.sendgrid.net/6aac149c6c1dbbaa/199545fa-b778-477=
+0-98db-063e29865f7f/1000x170.png">
+            <img class=3D"logo-dark" style=3D"width: 128px; height: auto; m=
+argin: 0 auto; display: none;" border=3D"0" width=3D"128" src=3D"http://cdn=
+.mcauto-images-production.sendgrid.net/6aac149c6c1dbbaa/6c3018c1-4c69-4ab2-=
+9b61-45287ac4d8bf/1000x167.png">
+          </td>
+        </tr>
+        <!-- Main Heading -->
+        <tr>
+          <td style=3D"vertical-align: top; padding-bottom: 16px; text-alig=
+n: center;">
+            <div style=3D"line-height: normal;">
+              <span class=3D"title-text" style=3D"color: #0d1217; font-weig=
+ht: 600; font-family: 'Inter', Arial, sans-serif; font-size: 24px; line-hei=
+ght: normal;">
+                Grow <span style=3D"color: #4bcc00;">HRDLF</span> after lis=
+ting
+              </span>
+            </div>
+          </td>
+        </tr>
+        <!-- Description Text -->
+        <tr>
+          <td style=3D"vertical-align: top; padding-bottom: 24px; text-alig=
+n: center; padding-left: 16%; padding-right: 16%;">
+            <div style=3D"line-height: normal; text-align: center;">
+              <div>
+              <span class=3D"body-text" style=3D"color: #64748b; font-weigh=
+t: 400; font-family: 'Inter', Arial, sans-serif; font-size: 14px; line-heig=
+ht: 21px;">
+                Once listed, you=E2=80=99ll be able to run targeted ads on =
+CoinGecko and GeckoTerminal.
+              </span>
+            </div>
+            <div style=3D"margin-top: 24px;">
+              <span class=3D"body-text" style=3D"color: #64748b; font-weigh=
+t: 400; font-family: 'Inter', Arial, sans-serif; font-size: 14px; line-heig=
+ht: 21px;">
+                Reach millions of crypto users and boost your project=E2=80=
+=99s visibility from just <b>$99</b>.
+              </span>
+            </div>
+            <div style=3D"margin-top: 24px;">
+              <a href=3D"https://url8813.coingecko.com/ls/click?upn=3Du001.=
+T7gBNiIZH18R09XAFsZfQ6dFXxLchgAaq5s-2F5PsEcIzTtbTVEpjZ1KU1CN9NihdHvCy6MTA5M=
+qGZoKyuY3Gr0lFeZTvLoiSSi8j05c6okyDUZJQJYxlwxeKcdbcrehCmY7klX8MXuAWwnv-2BMpS=
+haWTB4Ln1Sl9q4IIHd8LBiUSd16X3wiUfih-2FZ-2FWMcgSLlN53ZY_sYoWJySJBEKZCd26I6Rb=
+8a5jcp3t7DoblCjo-2BqLUDU5MB4XEAQ38jAFcxE34dawkSBD8Dk-2BiU854v-2BzJSB-2BEu8E=
+py40hQoviduLvZcJVGvQoyy0rdutRPN3Ay-2BJ8-2FIYKnnT4WOSzEGtyo-2F-2Fhzlt4h4h1-2=
+BkZD3F3ygicKyvFJlMqJnYguEfU8aOBnO-2FcF7MriuK85GUQ3Meu47Rogdgp3Ug-3D-3D"
+                style=3D"background-color: #4bcc00;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 0 0 #35af00;
+                  color: #ffffff;
+                  font-weight: 600;
+                  font-family: Arial, sans-serif;
+                  font-size: 14px;
+                  line-height: normal;
+                  text-decoration: none;
+                  padding: 10px 20px;
+                  display: inline-block;"
+              >
+                Explore Token Advertising
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style=3D"vertical-align: top; padding-bottom: 24px; text-alig=
+n: center;">
+            <div>
+              <img style=3D"width: 100%; height: auto; max-width: 320px;" b=
+order=3D"0" width=3D"100%" src=3D"http://cdn.mcauto-images-production.sendg=
+rid.net/6aac149c6c1dbbaa/28378849-4b65-4802-9a34-573d651115d2/1760x1088.png=
+">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+                                <tr>
+  <td style=3D"vertical-align: middle; border-radius: 8px; padding: 24px;" =
+width=3D"100%">
+    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" =
+class=3D"email-bg">
+      <tbody>
+        <tr>
+          <td style=3D"vertical-align: middle;" width=3D"100%">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%">
+              <tbody>
+                <tr>
+                  <td style=3D"vertical-align: top;" width=3D"100%">
+                    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ width=3D"100%">
+                      <tbody>
+                        <tr>
+                          <td style=3D"vertical-align: top;" width=3D"100%"=
+>
+                            <div style=3D"line-height: normal; text-align: =
+center; text-align: left; margin-bottom: 4px;">
+                              <span class=3D"small-text title-text" style=
+=3D"color: #0d1217; font-weight: 600; font-family: 'Inter', Arial, sans-ser=
+if; font-size: 12px; line-height: normal;">Gecko Labs Pte. Ltd.</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style=3D"vertical-align: top;" width=3D"100%"=
+>
+                            <div style=3D"line-height: normal; text-align: =
+center; text-align: left; margin-bottom: 10px;">
+                              <span class=3D"small-text footer-text" style=
+=3D"color: #475569; font-weight: 500; font-family: 'Inter', Arial, sans-ser=
+if; font-size: 12px; line-height: normal;">101 Upper Cross Street, 058357, =
+#05-16 People's Park Centre, Singapore</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Social Media Icons -->
+        <tr>
+          <td style=3D"vertical-align: top; padding-top: 40px;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+              <tbody>
+                <tr>
+                  <td style=3D"vertical-align: middle;">
+                    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ width=3D"100%">
+                      <tbody>
+                        <tr>
+                          <td style=3D"vertical-align: middle;" width=3D"15=
+">
+                            <a href=3D"https://url8813.coingecko.com/ls/cli=
+ck?upn=3Du001.T7gBNiIZH18R09XAFsZfQ1tnRRQ-2F9UckSoGtmojR7nsSovwpHzTe1ctbVFn=
+PYbcWwxiw_sYoWJySJBEKZCd26I6Rb8a5jcp3t7DoblCjo-2BqLUDU5MB4XEAQ38jAFcxE34daw=
+kKBCKwcrX75sWCg8yFQN-2FbphPyqBN5hbzKH2GwKW6-2Fb-2BdlXYFfAII3tSlS2T8izoH9aUo=
+r8oHu7Fejt7uoI9h-2FMguPaQ-2BJ34l25dazMbRN-2FsFkJfaLfNonrgAw8lCqFsv5CA0MUUze=
+xrLtldNoSRRuQ-3D-3D" target=3D"_blank">
+                              <img style=3D"width: 15px; height: auto; disp=
+lay: block; margin-right: 10px;" border=3D"0" width=3D"15" src=3D"https://m=
+edia.superhuman.com/images/_/https%3A%2F%2Fmedia.marka-img.com%2F69e9b2d2%2=
+FXZOIXv6ki6iblebYsnvJwUWHhzZuB2.png" alt=3D"Social">
+                            </a>
+                          </td>
+                          <td style=3D"vertical-align: middle;" width=3D"12=
+">
+                            <a href=3D"https://url8813.coingecko.com/ls/cli=
+ck?upn=3Du001.T7gBNiIZH18R09XAFsZfQ-2FQfGhvYnpZCdkfIRrQjl2DZH2fjwRtK-2F9Gs1=
+TtuyD87rwi2_sYoWJySJBEKZCd26I6Rb8a5jcp3t7DoblCjo-2BqLUDU5MB4XEAQ38jAFcxE34d=
+awkfGjfr2-2FB21RZ2nNgi72RzisXl6EM1Dd3y4ntT4iVFYCuKYFr75JlbwH-2FjI3l5wSJyKI0=
+Yn8VbEhtKnbu4cyQMf-2B8sXz-2FfcNn1sQsaPqLR7eQJBmDJmzKzuAyBu5194lLv0IB-2BFA4V=
+4TEJo3t9DMD-2BQ-3D-3D" target=3D"_blank">
+                              <img style=3D"width: 12px; height: auto; disp=
+lay: block; margin-right: 10px;" border=3D"0" width=3D"12" src=3D"https://m=
+edia.superhuman.com/images/_/https%3A%2F%2Fmedia.marka-img.com%2F69e9b2d2%2=
+FKcbAj3oxFSei0v5TejwCNHS8WaL9kg.png" alt=3D"Social">
+                            </a>
+                          </td>
+                          <td style=3D"vertical-align: middle;" width=3D"12=
+">
+                            <a href=3D"https://url8813.coingecko.com/ls/cli=
+ck?upn=3Du001.T7gBNiIZH18R09XAFsZfQ76BsZtd1F514sbqcpHRScRVQkRy4vZyuQQZDdTG3=
+NwD-mdj_sYoWJySJBEKZCd26I6Rb8a5jcp3t7DoblCjo-2BqLUDU5MB4XEAQ38jAFcxE34dawkf=
+Sus59feM7OO5IwSymI1DWbY2L-2FzFQODn-2F82eYltd4ktucJ83pUzOw2-2B1LJMLWzVcTciAH=
+QzQkoEJvnoYjhiIwqWTZv4M8XKRsxHB7Iq7-2B5WSt6v-2BwWYspjPwFbUcSiOB4-2FuN9sHTXg=
+id9tTyiLW0w-3D-3D" target=3D"_blank">
+                              <img style=3D"width: 12px; height: auto; disp=
+lay: block; margin-right: 10px;" border=3D"0" width=3D"12" src=3D"https://m=
+edia.superhuman.com/images/_/https%3A%2F%2Fmedia.marka-img.com%2F69e9b2d2%2=
+FPOfgHLSPBVDCyyK95HtOWs7mfGKWIx.png" alt=3D"Social">
+                            </a>
+                          </td>
+                          <td style=3D"vertical-align: middle;" width=3D"13=
+">
+                            <a href=3D"https://url8813.coingecko.com/ls/cli=
+ck?upn=3Du001.T7gBNiIZH18R09XAFsZfQ1woBnbPSt0CRVBY1rz53tw-3D3bqy_sYoWJySJBE=
+KZCd26I6Rb8a5jcp3t7DoblCjo-2BqLUDU5MB4XEAQ38jAFcxE34dawk2jmQdL85uuXOKYgm7zy=
+uQpzuaiKEJQaNT86oxc3wzcwPUFH8O-2FdD110JhhAXfpWfIlvcYEu35LjYYDiYJ-2FUmqN4fo6=
+OFhFFQR-2FdXdRrFBqsuRDj3J-2BR-2F08W-2FfrkdjpLezglXPIYQYLjOzxi2eQPKXA-3D-3D"=
+ target=3D"_blank">
+                              <img style=3D"width: 13px; height: auto; disp=
+lay: block; margin-right: 10px;" border=3D"0" width=3D"13" src=3D"https://m=
+edia.superhuman.com/images/_/https%3A%2F%2Fmedia.marka-img.com%2F69e9b2d2%2=
+FVfIfEpK1abh7c8H8YqoVFXg5pGhqUN.png" alt=3D"Social">
+                            </a>
+                          </td>
+                          <td style=3D"vertical-align: middle;" width=3D"14=
+">
+                            <a href=3D"https://url8813.coingecko.com/ls/cli=
+ck?upn=3Du001.T7gBNiIZH18R09XAFsZfQ-2FoRzIir0BS28d86VHoy4EE-3DFouQ_sYoWJySJ=
+BEKZCd26I6Rb8a5jcp3t7DoblCjo-2BqLUDU5MB4XEAQ38jAFcxE34dawk0vK0UWxNf2YXvctPb=
+dNzFFy6rAwgPv1mADGhKRER8glxl-2FFum9woagYYD7YJhhwxxVFz57oZPgH5nBH7TYocWh8gCP=
+TQT3UYxc01MgPCQumTf-2Fv-2B6ASF5NqLZHemz8A7Fne-2BsQTUqTTCAqzVs2gMrw-3D-3D" t=
+arget=3D"_blank">
+                              <img style=3D"width: 14px; height: auto; disp=
+lay: block; margin-right: 10px;" border=3D"0" width=3D"14" src=3D"https://m=
+edia.superhuman.com/images/_/https%3A%2F%2Fmedia.marka-img.com%2F69e9b2d2%2=
+FutYP7eGkRoPV1GIBWVkxZv2df9QkMS.png" alt=3D"Social">
+                            </a>
+                          </td>
+                          <td style=3D"vertical-align: middle;" width=3D"12=
+">
+                            <a href=3D"https://url8813.coingecko.com/ls/cli=
+ck?upn=3Du001.T7gBNiIZH18R09XAFsZfQ2rzXrDwU5qRUnYBfbGvI7g973hR8lt-2Bwl9QUyS=
+g2VTwPUT0sq2xhBhQUmSRxS3t0Q-3D-3Dm1C6_sYoWJySJBEKZCd26I6Rb8a5jcp3t7DoblCjo-=
+2BqLUDU5MB4XEAQ38jAFcxE34dawkH6Vn0dXfe5ZHhmdEX0LOcuz57WUXmVF75EwBCsJ73y8HOd=
+wQeokhlg0i0v-2BVjvikYV1BrSCpyxPfnuN-2BqWS5l8dVNb2sC3pEInjGy4L9ujhOQqRJi13vR=
+eSGh-2FfwbQs9DvPn1hLW7oKntQQuY0n2gg-3D-3D" target=3D"_blank">
+                              <img style=3D"width: 12px; height: auto; disp=
+lay: block; margin-right: 10px;" border=3D"0" width=3D"12" src=3D"https://m=
+edia.superhuman.com/images/_/https%3A%2F%2Fmedia.marka-img.com%2F69e9b2d2%2=
+FhWi8uT6FdpJjL93HMKXhx4YdcVHVse.png" alt=3D"Social">
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <img src=3D"https://url8813.coingecko.com/wf/open?upn=3Du001.zicSbD0bcWMs=
+wATqEuR0Mmqch0rZDe5S5PfzMGt6aX18ypQ1sBGXY4MpL5IhhgroMsRKfjwVo5rGOmArPQPVUO-=
+2B-2FVuGc3jd25MZDRMfBIPsfGNCFMxDlMH0RDesozC3HOLqM7GF-2FOtrzEikA8zeR7TVLRO0F=
+NnQGU56QOPOzM1MBI2rxkadjDq5UTJe3fJOzU5BmxElzSey5xhPSWDgDqQ-3D-3D" alt=3D"" =
+width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:=
+1px !important;border-width:0 !important;margin-top:0 !important;margin-bot=
+tom:0 !important;margin-right:0 !important;margin-left:0 !important;padding=
+-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;pa=
+dding-left:0 !important;"/></body>
+</html>

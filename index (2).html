@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardlife Apparel Company LTD | The Original Streetwear Brand Since 2006 | HRDLF</title>
+  <meta name="description" content="Hardlife Apparel Company. Independent streetwear founded in Philadelphia, 2006. Rooted in skate culture. Nothing Awesome Comes Easy.">
+  <meta property="og:title" content="Hardlife Apparel Company LTD | The Original Since 2006">
+  <meta property="og:description" content="Independent streetwear. Founded Philadelphia 2006. Before the hype.">
+  <meta property="og:url" content="https://hardlifeapparelco.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Anybody:wght@100;400;700;900&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --white: #ffffff; --black: #0a0a0a; --red: #c8251a; --gray: #666; --light: #f2f2f2; --border: #e0e0e0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--black); font-family: 'IBM Plex Mono', monospace; font-weight: 300; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); }
+    .nav-logo { font-family: 'Anybody', sans-serif; font-weight: 900; font-size: 13px; letter-spacing: 0.3em; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-shop a { color: var(--red); border: 1px solid var(--red); padding: 6px 16px; }
+    .nav-shop a:hover { background: var(--red); color: var(--white); }
+
+    /* TICKER */
+    .ticker { position: fixed; top: 61px; left: 0; right: 0; z-index: 99; background: var(--red); padding: 8px 0; overflow: hidden; white-space: nowrap; }
+    .ticker-inner { display: inline-flex; animation: ticker 24s linear infinite; }
+    .ticker-item { font-family: 'Anybody', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; padding: 0 32px; color: #fff; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero { padding-top: 100px; display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; border-bottom: 1px solid var(--border); }
+    .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: 80px 50px; border-right: 1px solid var(--border); }
+    .hero-year { font-size: 10px; letter-spacing: 0.4em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s; }
+    .hero-title { font-family: 'Anybody', sans-serif; font-weight: 900; font-size: clamp(52px, 8vw, 120px); line-height: 0.88; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 48px; color: var(--black); opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+    .hero-title .red { color: var(--red); }
+    .hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(16px, 2vw, 22px); color: var(--gray); line-height: 1.5; margin-bottom: 40px; max-width: 380px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; }
+    .hero-buttons { display: flex; gap: 12px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s; }
+    .btn-primary { display: inline-block; background: var(--red); color: #fff; font-family: 'Anybody', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; padding: 14px 28px; transition: background 0.2s; }
+    .btn-primary:hover { background: #a51e15; }
+    .btn-outline { display: inline-block; border: 1px solid var(--border); color: var(--gray); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; padding: 14px 24px; transition: all 0.2s; }
+    .btn-outline:hover { border-color: var(--black); color: var(--black); }
+    .hero-right { position: relative; overflow: hidden; background: var(--light); }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 8s ease; }
+    .hero-right:hover img { transform: scale(1.04); }
+    .hero-image-label { position: absolute; bottom: 24px; right: 24px; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(0,0,0,0.4); background: rgba(255,255,255,0.7); padding: 6px 12px; }
+
+    /* LOOKBOOK */
+    .lookbook { border-bottom: 1px solid var(--border); }
+    .lookbook-header { padding: 48px 40px 40px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .section-label { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--red); display: flex; align-items: center; gap: 16px; }
+    .section-label::before { content: ''; width: 24px; height: 1px; background: var(--red); }
+    .lookbook-link { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .lookbook-link:hover { color: var(--black); }
+    .lookbook-link::after { content: '→'; color: var(--red); }
+    .lookbook-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 480px 480px; }
+    .photo-cell { position: relative; overflow: hidden; background: var(--light); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .photo-cell:nth-child(3n+1) { border-right: 1px solid var(--border); }
+    .photo-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .photo-cell:hover img { transform: scale(1.04); }
+    .photo-cell-span { grid-row: span 2; }
+    .photo-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.5)); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.8); opacity: 0; transition: opacity 0.3s; }
+    .photo-cell:hover .photo-caption { opacity: 1; }
+
+    /* ARTICLE FEATURE */
+    .article-feature { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+    .article-text { padding: 80px 50px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
+    .article-tag { font-size: 9px; letter-spacing: 0.4em; color: var(--red); text-transform: uppercase; margin-bottom: 24px; }
+    .article-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(28px, 3.5vw, 52px); line-height: 1.1; margin-bottom: 24px; color: var(--black); }
+    .article-excerpt { font-size: 12px; line-height: 1.8; color: var(--gray); margin-bottom: 40px; max-width: 460px; }
+    .article-cta { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--black); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: gap 0.2s; }
+    .article-cta::after { content: '→'; color: var(--red); }
+    .article-cta:hover { gap: 20px; }
+    .article-image { position: relative; overflow: hidden; background: var(--light); min-height: 500px; }
+    .article-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.6s ease; }
+    .article-feature:hover .article-image img { transform: scale(1.03); }
+
+    /* STATEMENT */
+    .statement { padding: 100px 40px; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+    .statement-left { padding-right: 80px; border-right: 1px solid var(--border); }
+    .statement-left h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(32px, 4vw, 56px); line-height: 1.1; margin-bottom: 28px; color: var(--black); }
+    .statement-left h2 em { font-style: italic; color: var(--red); }
+    .statement-left p { font-size: 12px; line-height: 1.9; color: var(--gray); }
+    .statement-right { padding-left: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); align-content: start; }
+    .stat { background: var(--white); padding: 40px 32px; }
+    .stat-number { font-family: 'Anybody', sans-serif; font-weight: 900; font-size: 44px; color: var(--black); line-height: 1; margin-bottom: 8px; }
+    .stat-number span { color: var(--red); }
+    .stat-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); }
+
+    /* FOOTER */
+    footer { padding: 48px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); background: var(--white); }
+    .footer-logo { font-family: 'Anybody', sans-serif; font-weight: 900; font-size: 11px; letter-spacing: 0.3em; color: var(--gray); }
+    .footer-copy { font-size: 10px; color: #bbb; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--black); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .ticker { top: 53px; }
+      .hero { grid-template-columns: 1fr; padding-top: 90px; }
+      .hero-left { padding: 40px 20px 48px; border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-right { min-height: 70vw; }
+      .lookbook-header { padding: 32px 20px; }
+      .lookbook-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .photo-cell { aspect-ratio: 3/4; }
+      .photo-cell-span { grid-row: span 1; }
+      .article-feature { grid-template-columns: 1fr; }
+      .article-text { padding: 48px 20px; border-right: none; border-bottom: 1px solid var(--border); }
+      .article-image { min-height: 300px; }
+      .statement { grid-template-columns: 1fr; padding: 60px 20px; }
+      .statement-left { padding-right: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 48px; }
+      .statement-right { padding-left: 0; margin-top: 48px; }
+      footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 20px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Hardlife Apparel Company","alternateName":"HRDLF","url":"https://hardlifeapparelco.com","foundingDate":"2006","foundingLocation":"Philadelphia, PA","description":"Independent streetwear brand founded in Philadelphia in 2006. Rooted in skate culture. Nothing Awesome Comes Easy.","founder":{"@type":"Person","name":"Brooks Duvall"},"sameAs":["https://hrdlf.com","https://instagram.com/hrdlf"]}
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">HRDLF</a>
+  <ul class="nav-links">
+    <li><a href="/blog/underground-streetwear-brands-you-need-to-know/">Editorial</a></li>
+    <li><a href="https://hrdlf.com/about">About</a></li>
+    <li class="nav-shop"><a href="https://hrdlf.com" target="_blank">Shop HRDLF</a></li>
+  </ul>
+</nav>
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">HRDLF</span><span class="ticker-item">·</span>
+    <span class="ticker-item">FOUNDED 2006</span><span class="ticker-item">·</span>
+    <span class="ticker-item">PHILADELPHIA</span><span class="ticker-item">·</span>
+    <span class="ticker-item">NOTHING AWESOME COMES EASY</span><span class="ticker-item">·</span>
+    <span class="ticker-item">BEFORE THE HYPE</span><span class="ticker-item">·</span>
+    <span class="ticker-item">INDEPENDENT SINCE DAY ONE</span><span class="ticker-item">·</span>
+    <span class="ticker-item">HRDLF</span><span class="ticker-item">·</span>
+    <span class="ticker-item">FOUNDED 2006</span><span class="ticker-item">·</span>
+    <span class="ticker-item">PHILADELPHIA</span><span class="ticker-item">·</span>
+    <span class="ticker-item">NOTHING AWESOME COMES EASY</span><span class="ticker-item">·</span>
+    <span class="ticker-item">BEFORE THE HYPE</span><span class="ticker-item">·</span>
+    <span class="ticker-item">INDEPENDENT SINCE DAY ONE</span><span class="ticker-item">·</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-year">Est. Philadelphia — 2006</p>
+    <h1 class="hero-title">Hard<span class="red">Life</span><br>Apparel<br>Co.</h1>
+    <p class="hero-tagline">Before the hype. Independent since day one. Nothing Awesome Comes Easy.</p>
+    <div class="hero-buttons">
+      <a href="https://hrdlf.com" target="_blank" class="btn-primary">Shop HRDLF</a>
+      <a href="/blog/underground-streetwear-brands-you-need-to-know/" class="btn-outline">Read Editorial</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="/assets/images/hrdlf-camo-cap.jpeg" alt="HRDLF Camo Cap — Hardlife Apparel Company">
+    <span class="hero-image-label">HRDLF Camo Cap</span>
+  </div>
+</section>
+
+<section class="lookbook">
+  <div class="lookbook-header">
+    <span class="section-label">Lookbook</span>
+    <a href="https://hrdlf.com" target="_blank" class="lookbook-link">Shop All</a>
+  </div>
+  <div class="lookbook-grid">
+    <div class="photo-cell photo-cell-span">
+      <img src="/assets/images/hrdlf-hero-og-tee.jpeg" alt="HRDLF OG Tee — HardLife Apparel">
+      <span class="photo-caption">OG Tee — Shop at hrdlf.com</span>
+    </div>
+    <div class="photo-cell">
+      <img src="/assets/images/hrdlf-beanie-editorial.jpeg" alt="HRDLF Beanie — HardLife Apparel">
+      <span class="photo-caption">HRDLF Beanie</span>
+    </div>
+    <div class="photo-cell" style="background:#f8f8f8; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; padding:40px;">
+        <div style="font-family:'Anybody',sans-serif; font-weight:900; font-size:11px; letter-spacing:0.3em; color:#ccc; margin-bottom:16px;">HRDLF</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:32px; color:#ddd; line-height:1.3;">Nothing<br>Awesome<br>Comes Easy.</div>
+      </div>
+    </div>
+    <div class="photo-cell" style="border-top:1px solid var(--border);">
+      <img src="/assets/images/hrdlf-sweatshirt.jpeg" alt="HRDLF Sweatshirt — HardLife Apparel Co">
+      <span class="photo-caption">HardLife Sweatshirt</span>
+    </div>
+    <div class="photo-cell" style="background:var(--red); border-top:1px solid var(--border); display:flex; align-items:center; justify-content:center;">
+      <a href="https://hrdlf.com" target="_blank" style="text-align:center; text-decoration:none; padding:40px; display:block;">
+        <div style="font-family:'Anybody',sans-serif; font-weight:900; font-size:11px; letter-spacing:0.3em; color:rgba(255,255,255,0.6); margin-bottom:20px;">HRDLF.COM</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:36px; color:#fff; line-height:1.2; margin-bottom:24px;">Shop the<br>Collection</div>
+        <div style="font-family:'Anybody',sans-serif; font-size:10px; letter-spacing:0.3em; color:rgba(255,255,255,0.8); text-transform:uppercase;">Shop Now →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="article-feature">
+  <div class="article-text">
+    <p class="article-tag">Editorial · Culture · Feb 2026</p>
+    <h2 class="article-title">10 Underground Streetwear Brands to Watch in 2026</h2>
+    <p class="article-excerpt">The goal isn't to chase hype — it's to recognize momentum. This guide highlights 10 underground brands worth watching in 2026, plus a framework to spot the next one early. HRDLF leads the list.</p>
+    <a href="/blog/underground-streetwear-brands-you-need-to-know/" class="article-cta">Read the Full Editorial</a>
+  </div>
+  <div class="article-image">
+    <img src="/assets/images/hrdlf-immigrant-tee-hero.jpeg" alt="HRDLF Immigrant Tee — Hardlife Apparel Company">
+  </div>
+</section>
+
+<section class="statement">
+  <div class="statement-left">
+    <h2>There is only one.<br><em>The Original.</em></h2>
+    <p>Hardlife Apparel Company was founded in Philadelphia in 2006 — before Supreme went mainstream, before streetwear became a billion-dollar industry, before the hype. Two decades of independence, rooted in skate culture, built without outside investment. Nothing Awesome Comes Easy.</p>
+  </div>
+  <div class="statement-right">
+    <div class="stat"><div class="stat-number">20<span>+</span></div><div class="stat-label">Years Independent</div></div>
+    <div class="stat"><div class="stat-number"><span>'</span>06</div><div class="stat-label">Founded Philly</div></div>
+    <div class="stat"><div class="stat-number">0</div><div class="stat-label">Outside Investment</div></div>
+    <div class="stat"><div class="stat-number">1<span>.</span></div><div class="stat-label">Original HRDLF</div></div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">HARDLIFE APPAREL CO · EST. 2006</span>
+  <div class="footer-links">
+    <a href="https://hrdlf.com" target="_blank">Shop</a>
+    <a href="/blog/underground-streetwear-brands-you-need-to-know/">Editorial</a>
+    <a href="https://instagram.com/hrdlf" target="_blank">Instagram</a>
+  </div>
+  <span class="footer-copy">© 2026 Hardlife Apparel Company LTD. All rights reserved.</span>
+</footer>
+
+</body>
+</html>
