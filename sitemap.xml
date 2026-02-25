@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hardlifeapparelco.com/</loc><lastmod>2026-02-25</lastmod><priority>1.0</priority></url>
-  <url><loc>https://hardlifeapparelco.com/about/index.html</loc><lastmod>2026-02-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://hardlifeapparelco.com/blog/index.html</loc><lastmod>2026-02-25</lastmod><priority>0.9</priority></url>
-  <url><loc>https://hardlifeapparelco.com/blog/underground-streetwear-brands-you-need-to-know/index.html</loc><lastmod>2026-02-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://hardlifeapparelco.com/products/index.html</loc><lastmod>2026-02-25</lastmod><priority>0.9</priority></url>
-  <url><loc>https://hardlifeapparelco.com/origin-story/index.html</loc><lastmod>2026-02-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://hardlifeapparelco.com/what-is-hrdlf/index.html</loc><lastmod>2026-02-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://hardlifeapparelco.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hardlifeapparelco.com/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hardlifeapparelco.com/products/og-logo-tee/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hardlifeapparelco.com/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hardlifeapparelco.com/blog/underground-streetwear-brands-you-need-to-know/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hardlifeapparelco.com/blog/the-origin-story-hardlife-apparel-2006/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hardlifeapparelco.com/blog/what-is-hardlife-apparel/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hardlifeapparelco.com/blog/philadelphia-streetwear-scene/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hardlifeapparelco.com/lookbook/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hardlifeapparelco.com/press/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
