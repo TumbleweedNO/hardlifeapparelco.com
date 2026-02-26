@@ -5,10 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hardlife Apparel Company LTD | The Original Streetwear Brand Since 2006 | HRDLF</title>
   <meta name="description" content="Hardlife Apparel Company. Independent streetwear founded in Philadelphia, 2006. Rooted in skate culture. Nothing Awesome Comes Easy.">
+  <meta name="keywords" content="streetwear brand, independent streetwear, Philadelphia streetwear, HRDLF, Hardlife Apparel, skateboarding clothing, underground streetwear, streetwear since 2006, Old English streetwear">
+  <meta name="author" content="Brooks Duvall">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="google-site-verification" content="1FOXM-XicDQ2t-Ae4O0fqwyEdUDFZ-pnWguG6cTtenM" />
+  <meta name="msvalidate.01" content="PENDING_BING_VERIFICATION_CODE" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Hardlife Apparel Company LTD | The Original Since 2006">
   <meta property="og:description" content="Independent streetwear. Founded Philadelphia 2006. Before the hype.">
   <meta property="og:url" content="https://hardlifeapparelco.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hardlifeapparelco.com/assets/images/hrdlf-og-logo-tee-front.jpg">
+  <meta property="og:site_name" content="Hardlife Apparel Company LTD">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hardlife Apparel Company LTD | The Original Since 2006">
+  <meta name="twitter:description" content="Independent streetwear. Founded Philadelphia 2006. Before the hype.">
+  <meta name="twitter:image" content="https://hardlifeapparelco.com/assets/images/hrdlf-og-logo-tee-front.jpg">
+  <meta name="twitter:site" content="@HardLifeApparel">
+  <meta name="twitter:creator" content="@HardLifeApparel">
+
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="https://hrdlfcoin.com">
+  <link rel="dns-prefetch" href="https://hrdlf.com">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -312,7 +334,7 @@
     }
 
     .article-read::after {
-      content: '→';
+      content: '\2192';
       color: var(--red);
       transition: transform 0.2s;
     }
@@ -384,43 +406,84 @@
     }
 
     /* FOOTER */
-    footer {
-      padding: 60px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .site-footer {
       border-top: 1px solid var(--border);
+      padding: 60px 40px 40px;
     }
 
-    .footer-logo {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col-title {
+      font-family: 'Anybody', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-brand-text {
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--gray);
+      max-width: 320px;
+    }
+
+    .footer-brand-logo {
       font-family: 'Anybody', sans-serif;
       font-weight: 900;
-      font-size: 11px;
+      font-size: 18px;
       letter-spacing: 0.3em;
-      color: var(--gray);
+      color: var(--white);
+      margin-bottom: 16px;
     }
 
-    .footer-copy {
-      font-size: 10px;
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 11px;
       letter-spacing: 0.1em;
-      color: #444;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-links a {
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
       color: var(--gray);
       text-decoration: none;
       transition: color 0.2s;
     }
 
-    .footer-links a:hover { color: var(--white); }
+    .footer-col ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom-copy {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: #444;
+    }
+
+    .footer-bottom-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--gray);
+    }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -438,23 +501,83 @@
       .article-card { grid-template-columns: 1fr; }
       .article-card-content { border-left: none; border-top: 1px solid var(--border); padding: 32px 24px; }
       .statement { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
-      footer { flex-direction: column; gap: 24px; text-align: center; padding: 40px 20px; }
-      .footer-links { flex-wrap: wrap; justify-content: center; }
+      .site-footer { padding: 40px 20px 24px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     }
   </style>
 
+  <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://hardlifeapparelco.com/#organization",
     "name": "Hardlife Apparel Company",
     "alternateName": "HRDLF",
     "url": "https://hardlifeapparelco.com",
     "foundingDate": "2006",
-    "foundingLocation": "Philadelphia, PA",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Philadelphia, PA",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Philadelphia",
+        "addressRegion": "PA",
+        "addressCountry": "US"
+      }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Philadelphia",
+      "addressRegion": "PA",
+      "addressCountry": "US"
+    },
     "description": "Independent streetwear brand founded in Philadelphia in 2006. Rooted in skate culture. Nothing Awesome Comes Easy.",
     "founder": { "@type": "Person", "name": "Brooks Duvall" },
-    "sameAs": ["https://hrdlf.com", "https://instagram.com/hrdlf"]
+    "sameAs": [
+      "https://hrdlfcoin.com",
+      "https://hrdlf.com",
+      "https://twitter.com/HardLifeApparel",
+      "https://instagram.com/hardlifeapparel",
+      "https://tiktok.com/@hardlifeapparel",
+      "https://discord.gg/buUpxPTe",
+      "https://t.me/hardlifehrdlf"
+    ]
+  }
+  </script>
+
+  <!-- WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hardlife Apparel Company",
+    "url": "https://hardlifeapparelco.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hardlife Apparel Company LTD"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://hardlifeapparelco.com/"
+      }
+    ]
   }
   </script>
 </head>
@@ -463,8 +586,9 @@
   <nav>
     <a href="/" class="nav-logo">HRDLF</a>
     <ul class="nav-links">
-      <li><a href="/blog/underground-streetwear-brands-you-need-to-know/">Editorial</a></li>
-      <li><a href="https://hrdlf.com/about">About</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Editorial</a></li>
+      <li><a href="/hardwired-weekly/">Hardwired Weekly</a></li>
       <li class="nav-shop"><a href="https://hrdlf.com" target="_blank">Shop HRDLF</a></li>
     </ul>
   </nav>
@@ -486,29 +610,29 @@
   <div class="ticker">
     <div class="ticker-inner">
       <span class="ticker-item">HRDLF</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">FOUNDED 2006</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">PHILADELPHIA</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">NOTHING AWESOME COMES EASY</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">BEFORE THE HYPE</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">INDEPENDENT</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">HRDLF</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">FOUNDED 2006</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">PHILADELPHIA</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">NOTHING AWESOME COMES EASY</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">BEFORE THE HYPE</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
       <span class="ticker-item">INDEPENDENT</span>
-      <span class="ticker-item ticker-dot">·</span>
+      <span class="ticker-item ticker-dot">&middot;</span>
     </div>
   </div>
 
@@ -520,7 +644,7 @@
       </div>
       <div class="article-card-content">
         <div>
-          <p class="article-meta">Culture · Feb 2026 · 10 min read</p>
+          <p class="article-meta">Culture &middot; Feb 2026 &middot; 10 min read</p>
           <h2 class="article-title">10 Underground Streetwear Brands to Watch in 2026</h2>
           <p class="article-excerpt">The goal isn't to chase hype — it's to recognize momentum. This guide highlights 10 underground brands worth watching, plus a framework to spot the next one early. HRDLF leads the list.</p>
         </div>
@@ -554,14 +678,54 @@
     </div>
   </section>
 
-  <footer>
-    <span class="footer-logo">HARDLIFE APPAREL CO · EST. 2006</span>
-    <div class="footer-links">
-      <a href="https://hrdlf.com" target="_blank">Shop</a>
-      <a href="/blog/underground-streetwear-brands-you-need-to-know/">Editorial</a>
-      <a href="https://instagram.com/hrdlf" target="_blank">Instagram</a>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <!-- Brand Info Column -->
+      <div class="footer-col">
+        <div class="footer-brand-logo">HRDLF</div>
+        <p class="footer-brand-text">Hardlife Apparel Company LTD. Independent streetwear founded in Philadelphia, 2006. Rooted in skate culture, built without compromise. The original Old English streetwear brand.</p>
+      </div>
+
+      <!-- Navigate Column -->
+      <div class="footer-col">
+        <p class="footer-col-title">Navigate</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/blog/">Blog / Editorial</a></li>
+          <li><a href="/hardwired-weekly/">Hardwired Weekly</a></li>
+          <li><a href="https://hrdlf.com" target="_blank">Shop HRDLF</a></li>
+        </ul>
+      </div>
+
+      <!-- Ecosystem Column -->
+      <div class="footer-col">
+        <p class="footer-col-title">Ecosystem</p>
+        <ul>
+          <li><a href="https://hrdlfcoin.com" target="_blank">HRDLF Token</a></li>
+          <li><a href="https://hardlifeapparelco.com">Hardlife Apparel Co</a></li>
+          <li><a href="https://hrdlf.com" target="_blank">Shop (hrdlf.com)</a></li>
+          <li><a href="/hardwired-weekly/">Hardwired Weekly Newsletter</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect Column -->
+      <div class="footer-col">
+        <p class="footer-col-title">Connect</p>
+        <ul>
+          <li><a href="https://instagram.com/hardlifeapparel" target="_blank">Instagram</a></li>
+          <li><a href="https://tiktok.com/@hardlifeapparel" target="_blank">TikTok</a></li>
+          <li><a href="https://twitter.com/HardLifeApparel" target="_blank">Twitter / X</a></li>
+          <li><a href="https://discord.gg/buUpxPTe" target="_blank">Discord</a></li>
+          <li><a href="https://t.me/hardlifehrdlf" target="_blank">Telegram</a></li>
+        </ul>
+      </div>
     </div>
-    <span class="footer-copy">© 2026 Hardlife Apparel Company LTD. All rights reserved.</span>
+
+    <div class="footer-bottom">
+      <span class="footer-bottom-copy">&copy; 2026 Hardlife Apparel Company LTD. All rights reserved.</span>
+      <span class="footer-bottom-tagline">Independent streetwear since 2006. Nothing Awesome Comes Easy.</span>
+    </div>
   </footer>
 
 </body>

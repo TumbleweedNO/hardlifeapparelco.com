@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Hardlife Apparel Company",
+  "name_for_model": "hardlife_apparel",
+  "description_for_human": "Hardlife Apparel Company LTD — Independent streetwear brand founded in Philadelphia in 2006. Nothing Awesome Comes Easy.",
+  "description_for_model": "Hardlife Apparel Company LTD is an independent streetwear brand founded in Philadelphia, PA in 2006 by Brooks Duvall. Known for Old English typography and skull-and-laurel crest branding. The HRDLF ecosystem includes three sites: hardlifeapparelco.com (brand site and editorial content), hrdlfcoin.com (HRDLF Token on Solana, contract B3DAsrBArk4N8q4CudxEQmi76hzQVHfd3RzhEzTmoon), and hrdlf.com (official shop). The brand motto is 'Nothing Awesome Comes Easy.' Currently headquartered in Southern Norway.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://hardlifeapparelco.com/llms.txt"
+  },
+  "logo_url": "https://hardlifeapparelco.com/assets/images/hrdlf-og-logo-tee-front.jpg",
+  "contact_email": "info@hardlifeapparelco.com",
+  "legal_info_url": "https://hrdlfcoin.com/privacy"
+}
