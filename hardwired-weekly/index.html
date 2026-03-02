@@ -74,16 +74,48 @@
 </style>
 </head>
 <body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <style>
+    .announcement-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:#060606;height:36px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;overflow:hidden;}
+    .announcement-bar a{color:#FF006E;text-decoration:none;display:block;text-align:center;padding:0 40px;white-space:nowrap;}
+    .announcement-bar a:hover{text-decoration:underline;}
+    .announcement-bar .ab-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#555;cursor:pointer;font-size:14px;line-height:1;background:none;border:none;font-family:monospace;}
+    .announcement-bar .ab-close:hover{color:#FF006E;}
+    .announcement-bar .ab-msg{position:absolute;left:0;right:40px;text-align:center;opacity:0;transition:opacity 0.6s ease;}
+    .announcement-bar .ab-msg.active{opacity:1;}
+    .announcement-bar-spacer{height:36px;}
+    .site-header{top:36px !important;}
+    .nav-inner-circle{display:inline-block;color:#00D4FF !important;border:1px solid #00D4FF;padding:4px 10px;box-shadow:0 0 12px rgba(0,212,255,0.25);transition:all 0.3s ease;text-decoration:none;font-size:inherit;letter-spacing:inherit;text-transform:inherit;}
+    .nav-inner-circle:hover{box-shadow:0 0 20px rgba(0,212,255,0.5);border-color:#33E0FF;color:#fff !important;}
+  </style>
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="ab-msg active" data-index="0"><a href="/hardwired-weekly/">&#x1F534; NEXT DROP: FIRST THURSDAY — SUBSCRIBERS GET IN 48HRS EARLY → GET HARDWIRED WEEKLY FREE</a></div>
+    <div class="ab-msg" data-index="1"><a href="/archive/">⚡ FIRST 100 HRDLF COIN HOLDERS GO IN THE ARCHIVE PERMANENTLY → CLAIM YOUR SPOT NOW</a></div>
+    <div class="ab-msg" data-index="2"><a href="/drops/">📦 EVERY DROP SELLS OUT. NONE EVER RETURN. → SEE WHAT'S DROPPING THIS THURSDAY</a></div>
+    <button class="ab-close" aria-label="Dismiss">×</button>
+  </div>
+  <div class="announcement-bar-spacer" id="ab-spacer"></div>
+
 <div class="container">
   <h1>HARDWIRED WEEKLY</h1>
   <p class="subtitle">The underground streetwear intelligence brief.<br>Philadelphia · Est. 2006</p>
   <div class="subscribe-form">
     <form id="subscribe-form" action="https://hardwiredweekly.beehiiv.com/subscribe" method="post" target="_blank">
-      <input type="email" name="email" placeholder="your@email.com" required>
-      <button type="submit">SUBSCRIBE</button>
+      <input type="email" name="email" placeholder="your@email.com — drop access is free" required>
+      <button type="submit">GET IN BEFORE THE DROP →</button>
     </form>
   </div>
+  <p style="color:#555;font-size:12px;margin-top:16px;">Join 1,000+ subscribers · Leave the Movement = unsubscribe</p>
   <p class="archive-link"><a href="https://hardwiredweekly.beehiiv.com" target="_blank">View archive on Beehiiv →</a></p>
 </div>
+  <script>
+  (function(){
+    if(sessionStorage.getItem('ab_dismissed')){var b=document.getElementById('announcement-bar'),s=document.getElementById('ab-spacer'),h=document.querySelector('.site-header');if(b)b.style.display='none';if(s)s.style.display='none';if(h)h.style.top='0';return;}
+    var msgs=document.querySelectorAll('.ab-msg'),idx=0;
+    setInterval(function(){msgs[idx].classList.remove('active');idx=(idx+1)%msgs.length;msgs[idx].classList.add('active');},4000);
+    document.querySelector('.ab-close').addEventListener('click',function(){sessionStorage.setItem('ab_dismissed','1');document.getElementById('announcement-bar').style.display='none';document.getElementById('ab-spacer').style.display='none';var h=document.querySelector('.site-header');if(h)h.style.top='0';});
+  })();
+  </script>
 </body>
 </html>

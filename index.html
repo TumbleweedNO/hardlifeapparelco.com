@@ -61,7 +61,7 @@
     /* NAV */
     nav {
       position: fixed;
-      top: 0;
+      top: 36px;
       left: 0;
       right: 0;
       z-index: 100;
@@ -510,6 +510,41 @@
     @media (max-width: 480px) {
       .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     }
+
+    /* ANNOUNCEMENT BAR */
+    .announcement-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:#060606;height:36px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;overflow:hidden;}
+    .announcement-bar a{color:#FF006E;text-decoration:none;display:block;text-align:center;padding:0 40px;white-space:nowrap;}
+    .announcement-bar a:hover{text-decoration:underline;}
+    .announcement-bar .ab-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#555;cursor:pointer;font-size:14px;line-height:1;background:none;border:none;font-family:monospace;}
+    .announcement-bar .ab-close:hover{color:#FF006E;}
+    .announcement-bar .ab-msg{position:absolute;left:0;right:40px;text-align:center;opacity:0;transition:opacity 0.6s ease;}
+    .announcement-bar .ab-msg.active{opacity:1;}
+    .announcement-bar-spacer{height:36px;}
+
+    /* NAV Inner Circle glow */
+    .nav-inner-circle a{
+      color:#00D4FF !important;
+      border:1px solid #00D4FF !important;
+      padding:4px 10px !important;
+      box-shadow:0 0 12px rgba(0,212,255,0.25);
+      transition:all 0.3s ease !important;
+    }
+    .nav-inner-circle a:hover{
+      box-shadow:0 0 20px rgba(0,212,255,0.5);
+      border-color:#33E0FF !important;
+      color:#fff !important;
+    }
+
+    /* FOOTER EMAIL */
+    .footer-email-form{margin-top:20px;}
+    .footer-email-form form{display:flex;gap:8px;}
+    .footer-email-form input[type="email"]{background:#111;border:1px solid #333;color:var(--white);padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;flex:1;max-width:260px;outline:none;}
+    .footer-email-form input[type="email"]:focus{border-color:#00D4FF;}
+    .footer-email-form input[type="email"]::placeholder{color:#555;}
+    .footer-email-form button{background:#FF006E;color:#fff;border:none;padding:10px 18px;font-family:'Anybody',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+    .footer-email-form button:hover{background:#cc0058;}
+    .footer-email-desc{font-size:10px;color:#555;margin-top:8px;line-height:1.5;}
+    .footer-email-unsub{font-size:10px;color:#444;font-style:italic;margin-top:4px;}
   </style>
 
   <!-- Organization Schema -->
@@ -559,13 +594,23 @@
 </head>
 <body>
 
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="ab-msg active" data-index="0"><a href="/hardwired-weekly/">&#x1F534; NEXT DROP: FIRST THURSDAY &mdash; SUBSCRIBERS GET IN 48HRS EARLY &rarr; GET HARDWIRED WEEKLY FREE</a></div>
+    <div class="ab-msg" data-index="1"><a href="/archive/">&#x26A1; FIRST 100 HRDLF COIN HOLDERS GO IN THE ARCHIVE PERMANENTLY &rarr; CLAIM YOUR SPOT NOW</a></div>
+    <div class="ab-msg" data-index="2"><a href="/drops/">&#x1F4E6; EVERY DROP SELLS OUT. NONE EVER RETURN. &rarr; SEE WHAT&rsquo;S DROPPING THIS THURSDAY</a></div>
+    <button class="ab-close" aria-label="Dismiss">&times;</button>
+  </div>
+  <div class="announcement-bar-spacer" id="ab-spacer"></div>
+
   <nav>
     <a href="/" class="nav-logo">HRDLF</a>
     <ul class="nav-links">
       <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Editorial</a></li>
       <li><a href="/hardwired-weekly/">Hardwired Weekly</a></li>
-      <li class="nav-shop"><a href="https://hrdlf.com" target="_blank">Shop HRDLF</a></li>
+      <li class="nav-inner-circle"><a href="/inner-circle/">&#9733; Inner Circle</a></li>
+      <li class="nav-shop"><a href="https://hrdlf.com" target="_blank">Claim Yours</a></li>
     </ul>
   </nav>
 
@@ -577,8 +622,9 @@
     <div class="hero-bottom">
       <p class="hero-tagline">Nothing Awesome Comes Easy. Independent streetwear before the hype.</p>
       <div class="hero-cta">
-        <a href="https://hrdlf.com" target="_blank" class="btn-primary">Shop HRDLF</a>
-        <a href="/blog/underground-streetwear-brands-you-need-to-know/" class="btn-secondary">Read Editorial</a>
+        <a href="/drops/" class="btn-primary">SEE THIS WEEK'S DROP &rarr;</a>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:#666;margin-top:4px;text-align:right;">Limited run. First Thursday. Once it's gone &mdash; it's gone forever.</p>
+        <a href="/hardlife-story/" class="btn-secondary">READ THE STORY FIRST</a>
       </div>
     </div>
   </section>
@@ -660,6 +706,14 @@
       <div class="footer-col">
         <div class="footer-brand-logo">HRDLF</div>
         <p class="footer-brand-text">Hardlife Apparel Company LTD. Independent streetwear founded in Philadelphia, 2006. Rooted in skate culture, built without compromise. The original Old English streetwear brand.</p>
+        <div class="footer-email-form">
+          <form action="https://hardwiredweekly.beehiiv.com/subscribe" method="post" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit">GET IN EARLY &rarr;</button>
+          </form>
+          <p class="footer-email-desc">Every Thursday. Drop access. Coin updates. The unfiltered story. Free.</p>
+          <p class="footer-email-unsub">Leave the Movement = unsubscribe. No hard feelings.</p>
+        </div>
       </div>
 
       <!-- Navigate Column -->
@@ -670,7 +724,7 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/blog/">Blog / Editorial</a></li>
           <li><a href="/hardwired-weekly/">Hardwired Weekly</a></li>
-          <li><a href="https://hrdlf.com" target="_blank">Shop HRDLF</a></li>
+          <li><a href="https://hrdlf.com" target="_blank">Claim Yours</a></li>
         </ul>
       </div>
 
@@ -704,5 +758,33 @@
     </div>
   </footer>
 
+  <!-- Announcement Bar JS -->
+  <script>
+  (function(){
+    if(sessionStorage.getItem('ab_dismissed')){
+      var bar=document.getElementById('announcement-bar');
+      var spacer=document.getElementById('ab-spacer');
+      if(bar)bar.style.display='none';
+      if(spacer)spacer.style.display='none';
+      var nav=document.querySelector('nav');
+      if(nav)nav.style.top='0';
+      return;
+    }
+    var msgs=document.querySelectorAll('.ab-msg');
+    var idx=0;
+    setInterval(function(){
+      msgs[idx].classList.remove('active');
+      idx=(idx+1)%msgs.length;
+      msgs[idx].classList.add('active');
+    },4000);
+    document.querySelector('.ab-close').addEventListener('click',function(){
+      sessionStorage.setItem('ab_dismissed','1');
+      document.getElementById('announcement-bar').style.display='none';
+      document.getElementById('ab-spacer').style.display='none';
+      var nav=document.querySelector('nav');
+      if(nav)nav.style.top='0';
+    });
+  })();
+  </script>
 </body>
 </html>

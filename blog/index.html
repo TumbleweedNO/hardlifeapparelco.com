@@ -64,15 +64,37 @@
 </head>
 <body>
 
+  <!-- ANNOUNCEMENT BAR -->
+  <style>
+    .announcement-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:#060606;height:36px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;overflow:hidden;}
+    .announcement-bar a{color:#FF006E;text-decoration:none;display:block;text-align:center;padding:0 40px;white-space:nowrap;}
+    .announcement-bar a:hover{text-decoration:underline;}
+    .announcement-bar .ab-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#555;cursor:pointer;font-size:14px;line-height:1;background:none;border:none;font-family:monospace;}
+    .announcement-bar .ab-close:hover{color:#FF006E;}
+    .announcement-bar .ab-msg{position:absolute;left:0;right:40px;text-align:center;opacity:0;transition:opacity 0.6s ease;}
+    .announcement-bar .ab-msg.active{opacity:1;}
+    .announcement-bar-spacer{height:36px;}
+    .site-header{top:36px !important;}
+    .nav-inner-circle{display:inline-block;color:#00D4FF !important;border:1px solid #00D4FF;padding:4px 10px;box-shadow:0 0 12px rgba(0,212,255,0.25);transition:all 0.3s ease;text-decoration:none;font-size:inherit;letter-spacing:inherit;text-transform:inherit;}
+    .nav-inner-circle:hover{box-shadow:0 0 20px rgba(0,212,255,0.5);border-color:#33E0FF;color:#fff !important;}
+  </style>
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="ab-msg active" data-index="0"><a href="/hardwired-weekly/">&#x1F534; NEXT DROP: FIRST THURSDAY — SUBSCRIBERS GET IN 48HRS EARLY → GET HARDWIRED WEEKLY FREE</a></div>
+    <div class="ab-msg" data-index="1"><a href="/archive/">⚡ FIRST 100 HRDLF COIN HOLDERS GO IN THE ARCHIVE PERMANENTLY → CLAIM YOUR SPOT NOW</a></div>
+    <div class="ab-msg" data-index="2"><a href="/drops/">📦 EVERY DROP SELLS OUT. NONE EVER RETURN. → SEE WHAT'S DROPPING THIS THURSDAY</a></div>
+    <button class="ab-close" aria-label="Dismiss">×</button>
+  </div>
+  <div class="announcement-bar-spacer" id="ab-spacer"></div>
+
   <header class="site-header">
     <div class="site-header__inner">
       <a href="/" class="site-header__logo">HRDLF<span>.</span></a>
       <nav class="site-nav">
-        <a href="/about">About</a>
+        <a href="/about/">About</a>
         <a href="/blog/" class="active">Editorial</a>
-        <a href="/lookbook/">Lookbook</a>
-        <a href="/press/">Press</a>
-        <a href="https://hrdlf.com" target="_blank" rel="noopener" class="site-nav__cta">Shop Now <span class="btn__arrow">&rarr;</span></a>
+        <a href="/drops/">Drops</a>
+        <a href="/inner-circle/" class="nav-inner-circle">★ Inner Circle</a>
+        <a href="https://hrdlf.com" target="_blank" rel="noopener" class="site-nav__cta">Claim Yours <span class="btn__arrow">→</span></a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     </div>
@@ -140,7 +162,7 @@
             <span class="card__tag">Guides</span>
             <h3 class="card__title">The Definitive Guide to Heavyweight Cotton Tees</h3>
             <p class="card__excerpt">Fabric weights, construction methods, and why premium blanks matter.</p>
-            <span class="card__date">Coming March 2026</span>
+            <span class="card__date">Subscribers See This First — March 2026</span>
           </div>
         </a>
 
@@ -152,7 +174,7 @@
             <span class="card__tag">Local</span>
             <h3 class="card__title">Philadelphia&rsquo;s Streetwear Scene: A Complete Guide</h3>
             <p class="card__excerpt">From LOVE Park to South Street &mdash; the city that shaped Hardlife Apparel.</p>
-            <span class="card__date">Coming March 2026</span>
+            <span class="card__date">Subscribers See This First — March 2026</span>
           </div>
         </a>
 
@@ -164,7 +186,7 @@
             <span class="card__tag">Design</span>
             <h3 class="card__title">The History of Old English Typography in Street Culture</h3>
             <p class="card__excerpt">From medieval manuscripts to streetwear graphics &mdash; why Old English endures.</p>
-            <span class="card__date">Coming March 2026</span>
+            <span class="card__date">Subscribers See This First — March 2026</span>
           </div>
         </a>
 
@@ -176,7 +198,7 @@
             <span class="card__tag">Opinion</span>
             <h3 class="card__title">The Difference Between Real Streetwear and Fast Fashion</h3>
             <p class="card__excerpt">Why authenticity, heritage, and quality will always win.</p>
-            <span class="card__date">Coming April 2026</span>
+            <span class="card__date">Subscribers See This First — April 2026</span>
           </div>
         </a>
 
@@ -190,9 +212,10 @@
       <h2 class="t-display" style="font-size: clamp(2rem, 4vw, 3.5rem);">Never Miss a Drop</h2>
       <p>Join the Hardwired Weekly for editorial, drops, and insider access.</p>
       <form class="newsletter-form" style="margin: 0 auto;">
-        <input type="email" placeholder="Your email address" required aria-label="Email address">
-        <button type="submit">Subscribe</button>
+        <input type="email" placeholder="your@email.com — drop access is free" required aria-label="Email address">
+        <button type="submit">GET IN BEFORE THE DROP →</button>
       </form>
+      <p style="font-size:11px;color:var(--color-grey-500);margin-top:12px;">Join 1,000+ subscribers · Leave the Movement = unsubscribe</p>
     </div>
   </section>
 
@@ -204,6 +227,14 @@
           <div class="site-footer__brand">HRDLF<span style="color: var(--color-accent);">.</span></div>
           <p class="site-footer__tagline">Nothing Awesome Comes Easy.</p>
           <p style="font-size: 0.85rem; color: var(--color-grey-500); max-width: 300px;">Hardlife Apparel Company LTD. Founded in Philadelphia in 2006.</p>
+          <div style="margin-top:20px;">
+            <form action="https://hardwiredweekly.beehiiv.com/subscribe" method="post" target="_blank" style="display:flex;gap:8px;">
+              <input type="email" name="email" placeholder="your@email.com" required style="background:#111;border:1px solid #333;color:#f5f0e8;padding:10px 14px;font-family:monospace;font-size:11px;flex:1;max-width:220px;outline:none;">
+              <button type="submit" style="background:#FF006E;color:#fff;border:none;padding:10px 16px;font-family:'Arial Black',sans-serif;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">GET IN EARLY →</button>
+            </form>
+            <p style="font-size:10px;color:#555;margin-top:8px;line-height:1.5;">Every Thursday. Drop access. Coin updates. The unfiltered story. Free.</p>
+            <p style="font-size:10px;color:#444;font-style:italic;margin-top:4px;">Leave the Movement = unsubscribe. No hard feelings.</p>
+          </div>
         </div>
         <div>
           <h4>Navigate</h4>
@@ -211,7 +242,7 @@
         </div>
         <div>
           <h4>Ecosystem</h4>
-          <ul><li><a href="https://hrdlfcoin.com" target="_blank" rel="noopener">HRDLF Token</a></li><li><a href="https://hrdlf.com" target="_blank" rel="noopener">Shop HRDLF</a></li><li><a href="https://hardlifeapparelco.com">Hardlife Apparel Co.</a></li></ul>
+          <ul><li><a href="https://hrdlfcoin.com" target="_blank" rel="noopener">HRDLF Token</a></li><li><a href="https://hrdlf.com" target="_blank" rel="noopener">Claim Yours</a></li><li><a href="https://hardlifeapparelco.com">Hardlife Apparel Co.</a></li></ul>
         </div>
         <div>
           <h4>Connect</h4>
@@ -219,16 +250,19 @@
         </div>
       </div>
       <div class="site-footer__bottom">
-        <span class="site-footer__copyright">&copy; <span class="js-year">2026</span> Hardlife Apparel Company LTD. All rights reserved.</span>
-        <div class="site-footer__social">
-          <a href="https://instagram.com/hardlifeapparelco" target="_blank" rel="noopener">IG</a>
-          <a href="https://tiktok.com/@hardlifeapparelco" target="_blank" rel="noopener">TT</a>
-          <a href="https://twitter.com/HardLifeApparel" target="_blank" rel="noopener">X</a>
-        </div>
+        <span class="site-footer__copyright">© 2026 Hardlife Apparel Company LTD. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
+  <script>
+  (function(){
+    if(sessionStorage.getItem('ab_dismissed')){var b=document.getElementById('announcement-bar'),s=document.getElementById('ab-spacer'),h=document.querySelector('.site-header');if(b)b.style.display='none';if(s)s.style.display='none';if(h)h.style.top='0';return;}
+    var msgs=document.querySelectorAll('.ab-msg'),idx=0;
+    setInterval(function(){msgs[idx].classList.remove('active');idx=(idx+1)%msgs.length;msgs[idx].classList.add('active');},4000);
+    document.querySelector('.ab-close').addEventListener('click',function(){sessionStorage.setItem('ab_dismissed','1');document.getElementById('announcement-bar').style.display='none';document.getElementById('ab-spacer').style.display='none';var h=document.querySelector('.site-header');if(h)h.style.top='0';});
+  })();
+  </script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
