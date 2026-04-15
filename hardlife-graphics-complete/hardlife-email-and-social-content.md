@@ -18,7 +18,7 @@
 
 Hey [First Name],
 
-Almost two decades. That's how long it's been since we started Hardlife Apparel Company back in 2007.
+Almost two decades. That's how long it's been since we started Hardlife Apparel Company back in 2006.
 
 Nineteen years. And you know what? You've been here through it all—or at least through the parts that mattered most.
 
@@ -72,7 +72,7 @@ P.S. - Keep an eye on your inbox. We've got something special planned for the da
 
 **Almost two decades.**
 
-Let that sink in. Hardlife Apparel Company has been here since 2007. Nineteen years. Through recessions, pandemics, supply chain collapses, and every obstacle the world could throw at us.
+Let that sink in. Hardlife Apparel Company has been here since 2006. Twenty years. Through recessions, pandemics, supply chain collapses, and every obstacle the world could throw at us.
 
 But here's the truth: the first nine years were about survival. We were figuring it out. Making mistakes. Learning what it really meant to build something that mattered.
 
@@ -90,7 +90,7 @@ Almost two decades later, Hardlife Apparel Company is still standing. Still figh
 
 **HRDLF.com is coming.** New era. New energy. Same unbreakable spirit. Same mission: making things better for all of us.
 
-To every single person who's been part of this nineteen-year journey—whether you discovered us in 2007, 2016, or yesterday—**this is for you.**
+To every single person who's been part of this nineteen-year journey—whether you discovered us in 2006, 2016, or yesterday—**this is for you.**
 
 Thank you for proving that nothing awesome comes easy, but when you've got a community like ours, nothing is impossible.
 
@@ -99,7 +99,7 @@ Thank you for proving that nothing awesome comes easy, but when you've got a com
 ---
 
 **Hashtags:**
-#HardlifeApparel #HRDLF #NothingAwesomeComesEasy #AlmostTwoDecades #19YearsStrong #Since2007 #10YearsOfImpact #StreetWearCulture #IndependentBrand #LegacyBrand #CommunityFirst #ComingSoon #BuiltDifferent #UndergroundFashion #StillStanding #TheBestIsYetToCome #2007to2026 #StreetWearLegacy #IndependentStreetWear #SupportIndependent
+#HardlifeApparel #HRDLF #NothingAwesomeComesEasy #AlmostTwoDecades #19YearsStrong #Since2006 #10YearsOfImpact #StreetWearCulture #IndependentBrand #LegacyBrand #CommunityFirst #ComingSoon #BuiltDifferent #UndergroundFashion #StillStanding #TheBestIsYetToCome #2006to2026 #StreetWearLegacy #IndependentStreetWear #SupportIndependent
 
 ---
 
@@ -115,9 +115,9 @@ Thank you for proving that nothing awesome comes easy, but when you've got a com
 
 Almost two decades.
 
-2007-2026. 19 years of Hardlife Apparel.
+2006-2026. 20 years of Hardlife Apparel.
 
-The first 9 years: figuring it out.
+The first 10 years: figuring it out.
 The last 10 years: making an impact.
 
 Survived crashes, lockdowns, everything.
@@ -134,9 +134,9 @@ Nothing awesome comes easy. 🖤
 
 ## FULL TIKTOK CAPTION (Using "Almost Two Decades" Angle)
 
-Almost two decades. 2007-2026. 19 years of Hardlife Apparel and we're still standing. The first 9 years we were figuring it out. The last 10 years we made an impact. To everyone who believed through the evolution—this is for you. HRDLF.com coming soon. Nothing awesome comes easy. 🖤
+Almost two decades. 2006-2026. 20 years of Hardlife Apparel and we're still standing. The first 10 years we were figuring it out. The last 10 years we made an impact. To everyone who believed through the evolution—this is for you. HRDLF.com coming soon. Nothing awesome comes easy. 🖤
 
-#HardlifeApparel #HRDLF #NothingAwesomeComesEasy #AlmostTwoDecades #Since2007 #19Years #StreetWear #IndependentBrand #LegacyBrand #SmallBusinessCheck #Entrepreneur #ComingSoon #TheBestIsYetToCome #2007to2026 #StreetWearCulture #SupportIndependent #BuildInPublic
+#HardlifeApparel #HRDLF #NothingAwesomeComesEasy #AlmostTwoDecades #Since2006 #20Years #StreetWear #IndependentBrand #LegacyBrand #SmallBusinessCheck #Entrepreneur #ComingSoon #TheBestIsYetToCome #2006to2026 #StreetWearCulture #SupportIndependent #BuildInPublic
 
 ---
 
@@ -162,7 +162,7 @@ ALMOST
 TWO DECADES
 
 **[Below - Medium Text]**  
-2007 - 2026
+2006 - 2026
 
 **[Below - Body Text]**  
 19 years of existence  
@@ -185,7 +185,7 @@ HRDLF.com - COMING SOON
 HARDLIFE APPAREL COMPANY
 
 **[Center - Timeline Format]**  
-2007 → The Beginning  
+2006 → The Beginning  
 2016 → The Shift  
 2026 → The Evolution
 
@@ -210,7 +210,7 @@ TWO DECADES
 OF IMPACT
 
 **[Below]**  
-2007-2016: Figuring it out  
+2006-2016: Figuring it out  
 2016-2026: Making it matter
 
 Thank you to the day-ones who never left.
@@ -229,10 +229,10 @@ HRDLF.com - COMING SOON
 "Almost two decades..."
 
 **Story 2:**  
-"2007: We started Hardlife Apparel"
+"2006: We started Hardlife Apparel"
 
 **Story 3:**  
-"2007-2016: We were figuring it out"
+"2006-2016: We were figuring it out"
 
 **Story 4:**  
 "2016: Everything changed"
@@ -272,7 +272,7 @@ HRDLF.com - COMING SOON
 **For Instagram:**
 - Post during peak engagement hours (6-9 PM)
 - Pin a comment asking followers to share their "discovery year"
-- Share to Stories with poll: "Have you been with us since 2007?"
+- Share to Stories with poll: "Have you been with us since 2006?"
 - Create highlight reel titled "19 Years"
 - Engage with every comment in first 2 hours
 
@@ -285,7 +285,7 @@ HRDLF.com - COMING SOON
 
 **For TikTok:**
 - Use trending audio
-- Add text overlays with key years (2007, 2016, 2026)
+- Add text overlays with key years (2006, 2016, 2026)
 - Pin comment: "What year did you discover Hardlife? 👇"
 - Duet/Stitch friendly
 - Cross-post to Instagram Reels
@@ -297,7 +297,7 @@ HRDLF.com - COMING SOON
 ## KEY MESSAGING POINTS
 
 ✅ **"Almost two decades"** - Emphasizes longevity and staying power  
-✅ **"2007-2026"** - Clear timeline creates nostalgia  
+✅ **"2006-2026"** - Clear timeline creates nostalgia  
 ✅ **"19 years of existence, 10 years of impact"** - Honest and vulnerable  
 ✅ **"The day-ones who never left"** - Makes supporters feel valued  
 ✅ **"Nothing awesome comes easy"** - Reinforces brand slogan  
@@ -311,4 +311,4 @@ HRDLF.com - COMING SOON
 - Consider offering early access or exclusive discount to email subscribers
 - Use the COMING SOON graphic consistently across all platforms
 - Encourage user-generated content by asking followers to share their first Hardlife purchase
-- Create a branded hashtag like #HardlifeFor19Years or #Since2007 for community engagement
+- Create a branded hashtag like #HardlifeFor20Years or #Since2006 for community engagement

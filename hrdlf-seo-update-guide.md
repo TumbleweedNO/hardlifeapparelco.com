@@ -1,7 +1,7 @@
 # HRDLF.com SEO Update Guide
 ### Hardlife Apparel Company LTD — Full Meta Titles, Descriptions & Alt Text
 
-> **Important:** Change all references to "2007" on the About page to **2006** to remain consistent with hardlifeapparelco.com.
+> **Important:** All references to the founding year have been corrected to **2006** across all properties.
 
 ---
 
@@ -15,7 +15,7 @@
 ### About Page (/pages/about)
 - **Meta Title:** About Hardlife Apparel Co | Est. 2006 Philadelphia | HRDLF
 - **Meta Description:** Hardlife Apparel Company LTD was founded in Philadelphia in 2006. Built on the belief that nothing awesome comes easy — gothic aesthetics meet premium streetwear.
-- **Fix:** Change "2007" to **2006** in the page body text.
+- **Fix:** ~~Change "2007" to **2006** in the page body text.~~ DONE — all instances corrected to 2006.
 
 ### Contact / Support (/contact)
 - **Meta Title:** Contact & Support | Hardlife Apparel Co | HRDLF
@@ -464,7 +464,7 @@ Replace the generic Fourthwall Organization schema on every page with:
 
 ## QUICK-WIN CHECKLIST
 
-1. [ ] Update About page: change "2007" to "2006"
+1. [x] Update About page: change "2007" to "2006" — DONE
 2. [ ] Add meta titles and descriptions to all pages (copy from this guide)
 3. [ ] Update all product image alt text (copy from this guide)
 4. [ ] Add H1 tag to homepage
