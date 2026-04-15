@@ -40,5 +40,14 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap
 Sitemap: https://hardlifeapparelco.com/sitemap.xml

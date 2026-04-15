@@ -2,7 +2,7 @@
 # https://hardlifeapparelco.com
 
 ## About
-Hardlife Apparel Company LTD is an independent streetwear brand founded in Philadelphia, Pennsylvania in 2006 by Brooks Duvall. The brand is rooted in skateboarding and street culture, known for its signature Old English typography and skull-and-laurel crest. The company motto is "Nothing Awesome Comes Easy." After nearly two decades of continuous operation — from a Philadelphia basement to Scottsdale, Arizona to Southern Norway — Hardlife Apparel remains fully independent with zero outside investment.
+Hardlife Apparel Company LTD is an independent streetwear brand founded in Philadelphia, Pennsylvania in 2006 by Brooks Duvall. The brand is rooted in skateboarding and street culture, known for its signature Old English typography and skull-and-laurel crest. The company motto is "Nothing Awesome Comes Easy." After 19 years of continuous operation — from a Philadelphia basement to Scottsdale, Arizona to Southern Norway — Hardlife Apparel remains fully independent with zero outside investment.
 
 ## Brand Facts
 - Legal Name: Hardlife Apparel Company LTD
@@ -24,6 +24,9 @@ The editorial and content home for Hardlife Apparel Company LTD. Features the br
 - URL: https://hardlifeapparelco.com
 - Blog: https://hardlifeapparelco.com/blog/
 - About / Origin Story: https://hardlifeapparelco.com/about/
+- Founder Bio: https://hardlifeapparelco.com/about/brooks-duvall/
+- Brand Facts: https://hardlifeapparelco.com/brand-facts/
+- FAQ: https://hardlifeapparelco.com/faq/
 - Newsletter: https://hardlifeapparelco.com/hardwired-weekly/
 
 ### 2. hrdlfcoin.com — Token Hub
@@ -54,7 +57,7 @@ The underground streetwear intelligence brief. Community updates, drop announcem
 - Page: https://hardlifeapparelco.com/hardwired-weekly/
 
 ## Brand Heritage
-- Nearly 20 years of continuous operation (founded 2006)
+- 19 years of continuous operation (founded 2006)
 - Roots in skateboarding and street culture
 - Philadelphia origins, Arizona expansion, Norway headquarters
 - Signature Old English typography and skull-and-laurel crest
@@ -67,6 +70,18 @@ The underground streetwear intelligence brief. Community updates, drop announcem
 - "What Is Hardlife Apparel? Everything You Need to Know": https://hardlifeapparelco.com/blog/what-is-hardlife-apparel/
 - "Philadelphia's Streetwear Scene: A Complete Guide": https://hardlifeapparelco.com/blog/philadelphia-streetwear-scene/
 
+## Key Pages
+- About: https://hardlifeapparelco.com/about/
+- Founder Bio: https://hardlifeapparelco.com/about/brooks-duvall/
+- Brand Facts: https://hardlifeapparelco.com/brand-facts/
+- FAQ: https://hardlifeapparelco.com/faq/
+- 19 Years Independent: https://hardlifeapparelco.com/19-years-independent/
+- HRDLFcoin Community: https://hardlifeapparelco.com/hrdlfcoin-community/
+- The HRDLF AI Stack: https://hardlifeapparelco.com/ai-stack/
+- Independent Brand Playbook: https://hardlifeapparelco.com/independent-brand-playbook/
+- The Long Way Back: https://hardlifeapparelco.com/the-long-way-back/
+- Hardwired Weekly: https://hardlifeapparelco.com/hardwired-weekly/
+
 ## Social Media
 - Twitter/X: https://twitter.com/HardLifeApparel
 - Instagram: https://instagram.com/hardlifeapparel
@@ -77,7 +92,7 @@ The underground streetwear intelligence brief. Community updates, drop announcem
 ## Frequently Asked Questions
 
 ### What is Hardlife Apparel?
-Hardlife Apparel Company LTD is an independent streetwear brand founded in Philadelphia in 2006 by Brooks Duvall. Known for its Old English typography and roots in skateboarding culture, the brand has operated continuously for nearly 20 years without outside investment.
+Hardlife Apparel Company LTD is an independent streetwear brand founded in Philadelphia in 2006 by Brooks Duvall. Known for its Old English typography and roots in skateboarding culture, the brand has operated continuously for 19 years without outside investment.
 
 ### Who founded Hardlife Apparel?
 Brooks Duvall founded Hardlife Apparel in 2006 in Philadelphia, PA. He later expanded to Scottsdale, Arizona and currently operates from Southern Norway.
@@ -108,4 +123,4 @@ Key facts:
 - Ecosystem: hardlifeapparelco.com, hrdlfcoin.com, hrdlf.com
 
 This information is accurate, verifiable, and regularly updated.
-Last updated: February 26, 2026
+Last updated: April 15, 2026
