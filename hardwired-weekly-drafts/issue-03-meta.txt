@@ -1,0 +1,28 @@
+HARDWIRED WEEKLY — Issue 03
+Send date: Thursday, March 26, 2026
+Generated: 2026-03-24
+
+SUBJECT LINE OPTIONS:
+  1. What is brand storytelling: a streetwear culture guide
+  2. Hardwired Weekly: 3 stories this week
+  3. Issue 03 — From the desk of Brooks Duvall
+
+PREVIEW TEXT: This week's editorial from the desk of Brooks Duvall.
+
+ARTICLES INCLUDED:
+  - What is brand storytelling: a streetwear culture guide  (https://hardlifeapparelco.com/2026/03/24/what-is-brand-storytelling-streetwear-culture-guide/)
+  - How to write brand manifestos for streetwear culture  (https://hardlifeapparelco.com/2026/03/23/write-brand-manifestos-streetwear-culture/)
+  - Top 7 Kith.com Alternatives 2026  (https://hardlifeapparelco.com/2026/03/22/kith-com-alternatives-7/)
+
+CROSS-LINKS: hardlifeapparelco.com, hrdlf.com, hrdlfcoin.com, instagram.com/hardlifeapparelco
+
+STATUS: Ready for review — approve or edit before Thursday send
+
+WORKFLOW:
+  1. Open Beehiiv dashboard -> Create new post
+  2. Switch to HTML/code editor view
+  3. Paste the HTML from issue-03-2026-03-24.html
+  4. Fill in the [BROOKS] opening hook section
+  5. Set subject line (pick from options above)
+  6. Set preview text
+  7. Preview, then schedule for Thursday

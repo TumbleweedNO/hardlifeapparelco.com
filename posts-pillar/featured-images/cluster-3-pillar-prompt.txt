@@ -1,0 +1,19 @@
+FEATURED IMAGE PROMPT — Cluster 3 Pillar Post
+Post: "Independent Streetwear Brands: The Complete Guide (2026)"
+Filename: independent-streetwear-brands-2026.png
+WP Upload Target: To be assigned after post creation
+
+---
+
+PROMPT (paste into ChatGPT image generation):
+
+Overhead photograph of a worn wooden workbench in a founder's workspace. On the desk: scattered hand-drawn Old English typography sketches on yellowed paper, a beat-up skateboard deck from the 1980s with faded grip tape and stickers, a folded stack of heavyweight cotton t-shirts in black and white, a closed laptop, and a coffee mug. A single warm desk lamp provides natural-feeling light. The workspace feels authentic and lived-in — not staged or styled. No text overlays. No people visible. No brand logos legible. Muted warm tones, slight film grain. Style: editorial documentary photography, shot from above at a slight angle, shallow depth of field on the skateboard deck. Aspect ratio 16:9.
+
+---
+
+NOTES:
+- Editorial tone, not product photography
+- Should evoke "founder workspace" and "heritage"
+- Skateboard deck references the Venice Beach / skate culture origin
+- Typography sketches reference the Old English design DNA
+- No visible branding keeps it universal enough for the pillar post

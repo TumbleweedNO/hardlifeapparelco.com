@@ -1,3 +1,10 @@
 *.dmg
 *.zip
 picstoday1.zip
+
+# Sensitive / runtime files
+cdp_api_key*.json
+.hrdlf-agent-state.json
+hrdlf-cron.log
+hrdlf-sales-log.csv
+.DS_Store

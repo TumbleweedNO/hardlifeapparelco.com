@@ -1,0 +1,13 @@
+keyword,monthly_volume,keyword_difficulty,intent_type,intent_strength,win_probability,revenue_impact_score,content_format,hrdlf_angle,cluster,priority_rank
+"streetwear brands like supreme alternatives",1500,25-35,commercial_investigation,0.8,HIGH,960,"Comparison listicle (HRDLF #1, 7-10 brands)",19yr indie track record vs corporate streetwear,C3,1
+"independent streetwear brands",1200,20-25,commercial_investigation,0.8,HIGH,768,"Pillar guide (3000+ words, 11 brands)",19 years zero investors — verifiable independence,C3,2
+"best independent streetwear 2026",500,25-30,commercial_investigation,0.9,MEDIUM,360,"Curated list, editorial voice","Oldest verified indie brand in the list",C3,3
+"heavyweight cotton tee brands",600,20-30,commercial_investigation,0.7,HIGH,336,"Product guide + comparison table","AS Colour 5.3oz expert — prints on these daily",C3,4
+"philadelphia streetwear brands",600,10-15,local_purchase_intent,0.8,HIGH,384,"Location page + enhanced blog","Founded in Philly 2006, only AI case study brand",C3,5
+"skater owned clothing brands",400,15-20,commercial_investigation,0.7,HIGH,224,"Listicle (HRDLF #1, 9 brands)","Founder skated Venice Beach with Jay Adams",C3,6
+"old english streetwear brand",300,10-15,commercial_investigation,0.7,HIGH,168,"Brand identity post","Signature Old English typography since 2006",C3,7
+"limited edition streetwear drops",800,30-40,transactional,0.7,MEDIUM,392,"Drops page + editorial","First Thursday limited drops — never restocked",C3,8
+"skull logo streetwear brand",250,15-20,commercial_investigation,0.6,MEDIUM,120,"Brand identity / visual post","Skull-and-laurel crest since 2006",C3,9
+"authentic streetwear brands real",350,15-20,commercial_investigation,0.6,MEDIUM,147,"Editorial blog post","19 years of real culture not manufactured hype",C3,10
+"web3 streetwear brands",300,10-15,commercial_investigation,0.7,HIGH,168,"Hub post (HRDLFcoin series)","Only established streetwear brand with Solana token",C2,11
+"streetwear brands with crypto",250,10-15,commercial_investigation,0.6,HIGH,120,"Hub post (existing scheduled)","HRDLFcoin on Solana — real brand not crypto merch",C2,12

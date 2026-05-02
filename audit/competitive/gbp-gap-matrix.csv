@@ -1,0 +1,15 @@
+item_type,item,competitors_using_it,ranking_impact,ctr_impact,effort_to_add,verification_required
+profile,Google Business Profile (existence),Supreme; Stüssy; BAPE; Kith; Carhartt WIP; Off-White; Palace; ALD; Amiri; Nude Project,HIGH,HIGH,NOW (15 min),Yes (address/phone verification)
+category,Primary: Clothing Store,Supreme; Stüssy; BAPE; Kith; Carhartt WIP; Off-White; ALD; Amiri; Nude Project,HIGH,MEDIUM,NOW (1 min),No
+category,Secondary: Streetwear Store,Stüssy; Carhartt WIP,MEDIUM,MEDIUM,NOW (1 min),No
+category,Secondary: Online Clothing Store,Kith,MEDIUM,MEDIUM,NOW (1 min),No
+attribute,Founded Date (2006),Supreme (1994); Stüssy (1980); BAPE (1993); Carhartt WIP (1989); Palace (2009); ALD (2014),MEDIUM,HIGH,NOW (1 min),Yes (must be accurate)
+attribute,Website URL,All competitors with GBP,HIGH,HIGH,NOW (1 min),No
+attribute,Business Description,All competitors with GBP,MEDIUM,HIGH,NOW (5 min),No
+content,Business Photos (products),Supreme; Stüssy; BAPE; Kith; Carhartt WIP (50-500+ each),MEDIUM,HIGH,SOON (30 min),No
+content,Business Photos (logo/branding),All competitors with GBP,LOW,MEDIUM,NOW (2 min),No
+content,Google Posts (weekly),Very few competitors do this consistently,MEDIUM,MEDIUM,SOON (10 min/week ongoing),No
+content,Q&A (self-populated),Some competitors (Supreme; Kith; BAPE),MEDIUM,MEDIUM,NOW (15 min),No
+content,Reviews (request from customers),Supreme (500+); Kith (800+); BAPE (1000+),HIGH,HIGH,LATER (ongoing outreach),No
+attribute,Service Area (if no physical location),N/A — HRDLF is online-only,LOW,LOW,NOW (1 min),No
+attribute,Business Hours,Competitors with physical stores,LOW,LOW,NOW (1 min — set to online 24/7),No
